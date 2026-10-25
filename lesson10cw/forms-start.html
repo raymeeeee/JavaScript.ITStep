@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        #wrap {
+            width: 800px;
+            margin: 30px auto;
+            padding: 10px;
+            background: white;
+        }
+
+        form[name='userForm'] {
+            overflow: hidden;
+        }
+
+        #fio p {
+            border-bottom: 1px solid #aaa;
+        }
+
+        fieldset {
+            overflow: hidden;
+            margin: 15px auto;
+        }
+
+        legend {
+            color: dodgerblue;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 4px;
+        }
+
+        .left {
+            width: 350px;
+            float: left;
+        }
+
+        .empty {
+            box-shadow: 1px 1px 2px #FF9999;
+        }
+
+        .normal {
+            box-shadow: none;
+        }
+
+        #forPass {
+            position: relative;
+        }
+
+        .eye {
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 39c13.036 0 23.352-12.833 23.784-13.379l.491-.621-.491-.621C48.352 23.833 38.036 11 25 11S1.648 23.833 1.216 24.379L.725 25l.491.621C1.648 26.167 11.964 39 25 39zm0-26c10.494 0 19.47 9.46 21.69 12C44.473 27.542 35.509 37 25 37 14.506 37 5.53 27.54 3.31 25 5.527 22.458 14.491 13 25 13z'/%3E%3Cpath d='M25 34c4.963 0 9-4.038 9-9s-4.037-9-9-9-9 4.038-9 9 4.037 9 9 9zm0-16c3.859 0 7 3.14 7 7s-3.141 7-7 7-7-3.14-7-7 3.141-7 7-7z'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+            display: inline-block;
+            width: 30px;
+            height: 20px;
+            vertical-align: middle;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .eye.hide {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 28c-2.138 0-4.226-.426-6.205-1.265a1 1 0 11.781-1.841A13.82 13.82 0 0016 26c6.005 0 11.432-3.912 13.924-10-.923-2.251-2.297-4.286-3.988-5.902a1 1 0 011.38-1.447c1.994 1.905 3.59 4.322 4.618 6.99.088.231.088.487 0 .718C29.21 23.431 22.956 28 16 28zM7.59 25.409a.993.993 0 01-.555-.17c-3.084-2.066-5.558-5.22-6.969-8.88a1.002 1.002 0 010-.718C2.79 8.569 9.044 4 16 4c3.17 0 6.27.955 8.965 2.76a1 1 0 01-1.113 1.662C21.486 6.837 18.772 6 16 6 9.995 6 4.568 9.912 2.076 16c1.282 3.125 3.428 5.806 6.072 7.578a1 1 0 01-.557 1.83z'/%3E%3Cpath d='M3 30a1 1 0 01-.707-1.707l26-26a1 1 0 111.414 1.414l-26 26A.997.997 0 013 30zM14.259 21.741a6 6 0 007.483-7.483l-7.483 7.483z'/%3E%3Cpath d='M20.243 11.757a6 6 0 10-8.485 8.485l8.485-8.485z'/%3E%3C/svg%3E");
+        }
+
+        .some-conditions {
+            border: 2px solid #ccc;
+            width: 650px;
+            height: 200px;
+            overflow: auto;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <fieldset>
+            <legend>Логин-пароль</legend>
+            <form name="userForm">
+                <div class="left">
+                    <p> Логин <input type="text" value="" name="login"> </p>
+                    <p> Пароль <input type="password" value="" name="pass"> </p>
+                    <p> <input type="button" value="Проверить" name="check"> </p>
+                </div>
+                <div class="left">
+                    <div>Информация</div>
+                    <textarea name="info" cols="45" rows="4" value=""></textarea>
+                    <div><input type="submit" value="Проверить" name="checkInfo"></div>
+                </div>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ввод данных в текстовое поле - событие input</legend>
+            <p><input type="text" name="myInput" id="myInput" maxlength="20"> <span id="symbolsLeft"></span></p>
+            <p id="outputText"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Показываем/прячем пароль</legend>
+            <p><label for="hidePass" id="forPass"> Введите пароль <input type="password" name="hidePass" id="hidePass" maxlength="20"> <span class="eye"></span></label></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Согласие с условиями предоставления услуг</legend>
+            <div class="some-conditions">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea error molestiae facere tenetur alias laborum voluptates sint itaque, quos, quae blanditiis unde inventore magnam suscipit doloremque dolor nam eligendi laudantium.</p>
+                <p>Corporis sunt tenetur nam officiis iusto, magnam provident numquam pariatur molestias odit reiciendis laborum quasi tempore temporibus odio architecto maxime quisquam, nesciunt suscipit similique, voluptates necessitatibus error cupiditate fuga. Doloremque?</p>
+                <p>Consequuntur voluptatibus totam ex dignissimos incidunt distinctio eaque. Facilis eos odio commodi esse, nam consequatur labore, maiores neque. Est cupiditate earum necessitatibus quibusdam eos ut voluptatibus totam non! Dolorem, ducimus?</p>
+                <p>In cupiditate tempore provident deleniti totam consectetur qui a minima nulla illum, quidem beatae doloremque fuga alias iusto, aliquid, vel accusamus. Sint, unde vitae in. Laudantium perspiciatis minus tempora suscipit.</p>
+                <p>Soluta adipisci deleniti, beatae? Et magni laboriosam sequi fugit eveniet id nam aut vero iste, facere necessitatibus obcaecati quas, nihil expedita quis earum inventore eum reiciendis magnam veniam! Error, culpa.</p>
+            </div>
+            <form name="agreeForm">
+                <p><label for="agree"> Согласен с условиями <input type="checkbox" name="agree" id="agree"></label> <button name="continueBtn" disabled>Продолжить</button></p>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>Выделение списком</legend>
+            <form name="fio" id="fio">
+                <p> <input type="checkbox" name='all' id="all"><label for="all" id="chooseAll">Выделить всех</label> </p>
+                <p><label><input type="checkbox" name='f1'> Арзамасова </label></p>
+                <p><label><input type="checkbox" name='f1'> Березин </label></p>
+                <p><label><input type="checkbox" name='f1'> Иванов </label></p>
+                <p><label><input type="checkbox" name='f1'> Остроухова</label> </p>
+                <p><label><input type="checkbox" name='f1'> Петров </label></p>
+                <p><label><input type="checkbox" name='f1'> Сидоров </label></p>
+                <p><label><input type="checkbox" name='f1'> Угрюмов</label> </p>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>Выбор фона документа</legend>
+            <form name="chooseBg">
+                <label><input type="radio" name="bg" value="none" checked> нет</label>
+                <label><input type="radio" name="bg" value="bg/mramor.gif"> мрамор</label>
+                <label><input type="radio" name="bg" value="bg/rogoja.gif"> рогожка</label>
+                <label><input type="radio" name="bg" value="bg/sand.jpg"> песок розовый</label>
+                <label><input type="radio" name="bg" value="bg/sand2.jpg"> песок оранжевый</label>
+                <label><input type="radio" name="bg" value="bg/yellow.gif"> шестиугольники</label>
+            </form>
+        </fieldset>
+    </div>
+    <script src="./forms.js"></script>
+</body>
+
+</html>

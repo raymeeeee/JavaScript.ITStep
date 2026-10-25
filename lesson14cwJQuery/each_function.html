@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Function each</title>
+	<style>
+		#wrap {
+			width: 80%;
+			margin: 20px auto;
+			font-family: sans-serif;
+		}
+
+		.readmore {
+			color: red;
+			font-weight: bold;
+			display: block;
+		}
+		.test {
+			display: inline-block;
+			color: #fff;
+			background-color: #888;
+			padding: 10px;
+			margin: 5px;
+		}
+		#output {
+			padding: 10px;
+			font-size: 20px;
+			font-weight: bold;
+			border: 3px double #888;
+		}
+		#example-colors {
+			margin: 40px 0;
+		}
+		.product {
+			padding: 10px;
+		}
+		.test {cursor: pointer;}
+	</style>
+
+	<script>
+		$(function() {
+			var links = ['http://ruseller.com/lessons.php?id=1747&rub=32', 'http://web-answers.ru/questions-and-answers/javascript/jquery/jquery-kak-sozdat-element-neskolko-sposobov/', 'http://plugins.jquery.com/tag/lightbox/page/2/', 'http://jquery.page2page.ru/index.php5/%D0%92%D1%8B%D0%B7%D0%BE%D0%B2_%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8_%D0%B4%D0%BB%D1%8F_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D0%B0', 'http://drago-fly.ru/plagin-wp-parallax-content-slider/'];
+			var headers = ['jQuery рецепт: создание и добавление новых элементов', 'jQuery: как создать элемент (несколько способов)', 'jQuery pluggins.Tagged: lightbox', 'Вызов функции each для элементов набора', 'Плагин WP Parallax Content Slider'];
+		
+			
+		});
+	</script>
+</head>
+
+<body>
+	<div id="wrap">
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum suscipit reprehenderit excepturi ipsa impedit dolore facilis accusamus tempora dolores expedita! Consequuntur, obcaecati, commodi, iure, ea magnam nihil eum voluptates facilis nam expedita quasi fuga debitis soluta quia amet aut eligendi. Corporis, dolorum deserunt consequuntur magni iure culpa sed architecto illum accusamus dignissimos ipsa error itaque aliquid unde cupiditate aperiam ullam. Fugiat, cumque, vero, sapiente vitae minus voluptate laudantium iusto assumenda autem neque in tempora voluptatibus quis commodi pariatur doloribus asperiores numquam consectetur incidunt ab officiis officia sint itaque ratione quos odit dignissimos cupiditate reprehenderit placeat mollitia nulla totam explicabo nam.</p>
+
+		<p>Maxime, voluptate nesciunt et. Obcaecati, consectetur, debitis, et officiis accusantium expedita repudiandae exercitationem sed nobis fugiat ratione alias architecto dolor qui deleniti nesciunt eum odio voluptatibus numquam eos! Modi, esse, porro dolores dolor hic maxime vero consectetur perferendis beatae odit id ea pariatur dicta praesentium amet expedita tempora numquam repellat quo fugiat atque! A, rem, doloremque dolorum quasi doloribus perspiciatis eveniet deleniti voluptatem similique labore earum necessitatibus debitis libero neque molestias laudantium adipisci delectus commodi aliquid assumenda nam vero omnis facilis qui quisquam hic distinctio repellat explicabo blanditiis at nisi sunt placeat sit. Quam, et minus ducimus doloremque iure provident!</p>
+		<p>Dolores explicabo illum blanditiis ipsam accusantium commodi earum in. Deserunt, dolorem, fuga, neque, corporis obcaecati voluptate dolor fugiat architecto quisquam asperiores voluptatibus ut fugit dolorum quo sit. Nam, libero impedit illum fugit quae dolorum ab quis fugiat a nulla consequuntur ratione dignissimos in neque accusantium facere eius aperiam mollitia eveniet ea voluptatum saepe officia sint tempore voluptates. Quidem, explicabo, veniam unde ab saepe tenetur non labore culpa veritatis facere cupiditate suscipit ex quos pariatur accusantium maiores distinctio beatae at provident totam libero nihil rerum? Esse, aspernatur, quas, vero, odit rerum dolorum recusandae tempore deserunt ipsum delectus asperiores nesciunt vel aperiam.</p>
+		<p>Quas, molestias, non, voluptate, obcaecati itaque quisquam ipsum ab ipsa laudantium labore eveniet dolore sequi unde eos pariatur corrupti a dicta iusto earum esse commodi repellat distinctio tenetur cumque recusandae maxime amet odio fugiat nihil sit saepe sint illum sapiente iste dolorum nam quia. Nihil, ad, recusandae quis veritatis cum quibusdam alias sint suscipit voluptas repudiandae ullam quo nemo fugiat blanditiis commodi! Dolorum, unde, veritatis, explicabo, nisi quam sint animi magni consequuntur suscipit facilis voluptatibus dignissimos ab neque soluta labore tempore esse alias aspernatur impedit iste nostrum dolorem repudiandae maiores eius reprehenderit odit saepe voluptatem provident ea culpa debitis recusandae!</p>
+		<p>Qui voluptatum possimus sit iure nisi aut nulla. Sed, dolorum, suscipit, culpa dicta unde cum itaque labore ratione ea expedita quidem et assumenda modi blanditiis sequi velit veritatis distinctio quibusdam iste quis laudantium eaque quod earum quos placeat molestiae deserunt deleniti quaerat ullam doloribus delectus natus tempore minus! Unde, maxime, illo, voluptate, iste voluptatum animi sint dolore laborum laudantium repellendus perspiciatis ab consectetur quisquam suscipit quibusdam nihil repudiandae aliquam expedita alias pariatur nulla aut reprehenderit laboriosam voluptatem in nemo eveniet consequuntur recusandae neque accusantium omnis nobis nesciunt dolorem fugiat delectus fuga vel. Facilis dolores atque totam consequuntur voluptatibus rerum praesentium!</p>
+		<div id="example-colors">
+			<div class="product">Red</div>
+			<div class="product">Orange</div>
+			<div class="product">Green</div>
+		</div>	
+	
+		<div class="test" data-img="img/picture1.jpg"  data-text="Hello">Photo 1</div>
+		<div class="test" data-img="img/picture2.jpg"  data-text="JavaScript">Photo 2</div>
+		<div id="output"></div>
+ </div>
+</body>
+</html>

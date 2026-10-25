@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>onload event</title>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: #e74c3c;
+			font-family: 'Lato', sans-serif;
+		}
+
+		h1 {
+			color: #fff;
+			text-align: center;
+			font-weight: 200;
+			margin: 10% auto;
+			font-size: 50px;
+		}
+
+		#content {
+			display: none;
+			max-width: 80%;
+			max-width: 800px;
+			margin: 10px auto;
+			color: #fff;
+		}
+
+		#body {
+			position: fixed;
+			background: #00dbff;
+			width: auto;
+			margin: 0px 0px 0px;
+			min-width: 100%;
+			height: auto;
+			min-height: 100%;
+		}
+
+		#loading {
+			cursor: wait;
+			background-color: rgba(0, 0, 0, 0);
+			opacity: .8;
+			border-radius: 50px;
+			margin: 10% auto;
+			-webkit-animation: loading .5s infinite linear;
+			animation: loading .5s infinite linear;
+		}
+
+		.spin-1 {
+			border: 5px solid #fff;
+			border-top: 5px solid rgba(0, 0, 0, 0);
+			border-left: 5px solid rgba(0, 0, 0, 0);
+			width: 30px;
+			height: 30px;
+		}
+
+		@keyframes loading {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+
+		@-webkit-keyframes loading {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="body">
+		<div id="loading" class="spin-1"></div>
+	</div>
+
+	<div id="content">
+		<h1>Load Complete!</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fermentum, erat id fermentum tincidunt, justo
+			eros lacinia orci, id pulvinar nulla sapien eget lacus.</p>
+		<img src="https://picsum.photos/800/400?random=1" alt="Random">
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+		<img src="https://picsum.photos/800/400?random=2" alt="Random">
+		<p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+			explicabo.</p>
+		<img src="https://picsum.photos/800/400?random=3" alt="Random">
+		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+			eos qui ratione voluptatem sequi nesciunt.</p>
+		<img src="https://picsum.photos/800/400?random=4" alt="Random">
+		<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+		<img src="https://picsum.photos/800/400?random=5" alt="Random">
+		<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+			corrupti quos dolores.</p>
+	</div>
+	<script src="./window-onload.js"></script>
+</body>
+
+</html>

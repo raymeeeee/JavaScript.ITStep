@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cookie and localStorage image</title>
+	<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
+	<style>
+		.choose-photo {
+			cursor: pointer;
+		}
+
+		.choose-photo img {
+			border: 2px solid #ccc;
+		}
+
+		.choose-photo.bg-success img {
+			border-color: #fff;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="text-center my-3">Выберите цветок</h1>
+		<p><a href="https://github.com/js-cookie/js-cookie" target="_blank">Link plugin JS Cookie</a></p>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card choose-photo border-light mb-3" id="card0" data-description="Ромашка — это травянистое растение с ветвистым стеблем и многочисленными узенькими листочками. Она теплолюбива, потому прекрасно себя чувствует в южных краях нашей страны. Цветок ромашки состоит из беленьких лепестков и желтой серединки. Ромашка очень ароматное растение." data-url="http://xcook.info/product/cvety-romashki.html">
+					<div class="card-header">Ромашка</div>
+					<div class="card-body">
+						<img src="https://images.unsplash.com/photo-1624041755997-393bd6b31f05?crop=faces&fit=crop&w=300&h=300" alt="Ромашка" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card choose-photo border-light mb-3" id="card1" data-description="Мак (лат. Papаver) — травянистое растение семейства маковых. Бывает многолетним, однолетним или двухлетним, имеет множество различных подвидов. Это лекарственное растение с развитыми стеблями, перистыми листьями и красивыми цветами, как правило ярко-красного или оранжевого цвета." data-url="https://krasnyj-cvet.ru/krasnyj-mak-cvetok-prekrasnyx-gryoz-i-snovidenij.html">
+					<div class="card-header">Мак</div>
+					<div class="card-body">
+						<img src="https://images.unsplash.com/photo-1623860485657-b90f0289588b?crop=faces&fit=crop&w=300&h=300" alt="Мак" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card choose-photo border-light mb-3" id="card2" data-description="Dicentra formosa (западное, дикое или тихоокеанское кровоточащее сердце) - это цветущее растение с похожими на папоротник листьями и соцветиями поникших розовых, пурпурных, желтых или кремовых цветов, произрастающих на тихоокеанском побережье Северной Америки" data-url="https://www.picturethisai.com/ru/care/Dicentra_formosa.html">
+					<div class="card-header">Дицентра красивая</div>
+					<div class="card-body">
+						<img src="https://images.unsplash.com/photo-1560591850-237914756f61?crop=faces&fit=crop&w=300&h=300" alt="Дицентра красивая" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card choose-photo border-light mb-3" id="card3" data-description="В европейские языки название цветка тюльпана пришло из османско-персидского словаря. Слово «tülbend» обозначало ткань для национального головного убора. Позже это понятие стало соответствовать не только материалу, из которого он изготавливался, но и самому тюрбану, имевшему внешнее сходство с цветком. Вероятно, заимствование произошло почти одновременно в странах Восточной и Западной Европы, поэтому итальянское «tulipano», польское «tulipan», а также утратившие окончание «an» немецкое «tulpe» и нидерландское «tulp» имеют общий корень. В русский язык слово тюльпан вошло как свободное прочтение польского названия растения." data-url="https://dolinasad.by/blog/sovety-pokupatelyam/tyulpany-v-sadu-populyarnye-sorta-posadka-ukhod/">
+					<div class="card-header">Тюльпан</div>
+					<div class="card-body">
+						<img src="https://images.unsplash.com/photo-1558126982-1e0b497570b6?crop=faces&fit=crop&w=300&h=300" alt="Тюльпан" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card choose-photo border-light mb-3" id="card4" data-description="Размер орхидей может варьироваться от нескольких сантиметров, хотя отдельные виды вырастают до 35 метров в высоту. Большая часть орхидей относится к эпифитам, которые произрастают на других растениях, используя их в качестве опоры и не являясь при этом паразитами." data-url="https://podrobnosti.ua/2239579-orhidei-v-dome-primety-i-sueverija.html">
+					<div class="card-header">Орхидея</div>
+					<div class="card-body">
+						<img src="https://images.unsplash.com/photo-1615703771492-0048ec301665?crop=faces&fit=crop&w=300&h=300" alt="Орхидея" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card choose-photo border-light mb-3" id="card5" data-description="Шафран (лат. Crocus) — род многолетних клубнелуковичных травянистых растений семейства Ирисовые, или Касатиковые (Iridaceae). В литературе по декоративному цветоводству встречается заимствованное латинское название кро́кус" data-url="https://halal-spb.ru/article/chto-takoe-shafran-i-pochemu-tak-cenen">
+					<div class="card-header">Шафран</div>
+					<div class="card-body">
+						<img src="https://images.unsplash.com/photo-1649538977380-72696b3163c5?crop=faces&fit=crop&w=300&h=300" alt="Шафран" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card choose-photo border-light mb-3" id="card6" data-description="Название цветка «ирис» означает — радуга (перевод с греческого языка). Ирис, или касатик, или петушок, растет в разных природных уголках планеты. Есть множество сортов ирисов с разнообразными окрасками: белые и желтые, розовые и голубые, все оттенки синего, сиреневого, фиолетового." data-url="https://flowers.ua/ru/articles/ranunkulyus-vyrashchivanie-posadka-i-uhod-v-otkrytom-grunte-i-doma">
+					<div class="card-header">Лютик азиатский</div>
+					<div class="card-body">
+						<img src="https://images.unsplash.com/photo-1553456520-d9d4dbfe9bd4?crop=faces&fit=crop&w=300&h=300" alt="Лютик азиатский" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card choose-photo border-light mb-3" id="card7" data-description="Название цветка «ирис» означает — радуга (перевод с греческого языка). Ирис, или касатик, или петушок, растет в разных природных уголках планеты. Есть множество сортов ирисов с разнообразными окрасками: белые и желтые, розовые и голубые, все оттенки синего, сиреневого, фиолетового." data-url="https://dolinasad.by/blog/sovety-pokupatelyam/iris-lyubimyy-tsvetok-khudozhnikov-i-koroley-razbiraem-sorta/">
+					<div class="card-header">Ирис</div>
+					<div class="card-body">
+						<img src="https://images.unsplash.com/photo-1595531393554-770837e2801b?crop=faces&fit=crop&w=300&h=300" alt="Ирис" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="text-center mt-3">
+			<button class="btn btn-success" id="chooseBtn">Я выбрал(а)</button>
+		</p>
+	</div>
+	<!--<script src="js/js.cookie.min.js"></script> -->
+	<script src="./js/js.cookie.min.js"></script>
+	
+	<script src="./js/img.js"></script>
+</body>
+
+
+</html>

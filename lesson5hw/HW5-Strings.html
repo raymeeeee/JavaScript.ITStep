@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+	<title>HW Strings</title>
+	<style>
+		body {
+			margin: 30px 10%;
+			font-family: sans-serif;	
+			min-height: 90vh;
+		}
+		.panel-block {
+			border: 1px solid #aaa;
+			border-radius: 5px;
+			max-width: 600px;
+		}
+		.panel-header {
+			margin: 0;
+			padding: 15px;
+			border-bottom: 1px solid #aaa;
+			background-color: #ddd;
+			display: flex;
+			justify-content: space-between;
+		}
+		.panel-body {
+			padding: 15px;
+			border-bottom: 1px solid #aaa;
+		}
+		.panel-header.collapsed + .panel-body{
+			display: none;
+		}
+		.panel:last-of-type .panel-body {
+			border-bottom: none;
+		}
+		.ani {
+			font-size: 2em;
+			margin: 2em 0;
+		}
+		.fly {
+			display: inline-block;
+			animation: fade 1s  cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		}
+
+		@keyframes fade {
+			100% {
+				transform: translateY(100px);
+				opacity: 0;
+			}
+		}
+	</style>
+	
+</head>
+<body>
+	
+	<div class="panel-block">
+		<div class="panel">
+			<h4 class="panel-header">What do you need? <i class="bi bi-chevron-double-up"></i></h4>
+			<div class="panel-body">
+				Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+			</div>
+		</div>
+		<div class="panel">
+			<h4 class="panel-header">What do you do?<i class="bi bi-chevron-double-up"></i></h4>
+			<div class="panel-body">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quia minima atque voluptate modi itaque error illo quaerat eos id incidunt tenetur deleniti, praesentium omnis quasi laborum distinctio rem minus.
+			</div>
+		</div>
+		<div class="panel">
+			<h4 class="panel-header">What do you have to do?<i class="bi bi-chevron-double-up"></i></h4>
+			<div class="panel-body">
+				Minus atque voluptates mollitia vel debitis, rem obcaecati magni commodi ratione maiores. Cum, necessitatibus quibusdam dolorem aut adipisci labore aperiam incidunt provident suscipit explicabo in ut nam deserunt nostrum quaerat.
+			</div>
+		</div>
+		<div class="panel">
+			<h4 class="panel-header">What do know about Lorem ipsum?<i class="bi bi-chevron-double-up"></i></h4>
+			<div class="panel-body">
+				Natus repellendus mollitia accusantium distinctio earum quae voluptate et eum. Quam asperiores labore maiores perferendis beatae! Ducimus cupiditate repellendus provident assumenda porro dolorem voluptatem earum officiis deleniti ipsa. Eius, cumque?
+			</div>
+		</div>
+	</div>
+	<h2 class="ani">
+		<span class="fly" style="animation-delay: .1s;">A</span>
+		<span class="fly" style="animation-delay: .2s;">n</span>
+		<span class="fly" style="animation-delay: .4s;">i</span>
+		<span class="fly" style="animation-delay: .4s;">m</span>
+		<span class="fly" style="animation-delay: .5s;">a</span>
+		<span class="fly" style="animation-delay: .6s;">t</span>
+		<span class="fly" style="animation-delay: .7s;">e</span>
+	</h2>
+
+
+	<div>
+		<label for="name">Word:</label>
+		<input
+		type="text"
+		id="name"
+		name="name"/>
+	</div>
+	
+
+
+
+
+
+
+	<script src="./script.js"></script>
+</body>
+</html>

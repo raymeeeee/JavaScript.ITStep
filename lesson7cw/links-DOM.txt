@@ -1,0 +1,6 @@
+Ссылки по теме:
+https://html-plus.in.ua/choose-html-elements-by-javascript/
+https://html-plus.in.ua/kak-zapisat-stroku-iz-javascript-v-html/
+https://html-plus.in.ua/css-cvoystva-yelementa-ispolzovanie-v-javascript/
+https://html-plus.in.ua/use-data-attributes-in-html-css-javascript-and-jquery/
+https://html-plus.in.ua/sozdanie-html-yelementov-v-javascript/

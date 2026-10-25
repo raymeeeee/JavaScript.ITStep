@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>preventDefault()</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px 10%;
+        }
+
+        label {
+            display: inline-block;
+            width: 60px;
+            margin-right: 10px;
+        }
+        input {padding: 5px;}
+    </style>
+</head>
+
+<body>
+    <a href="https://google.com.ua" onclick="if(!confirm('Need search?')) event.preventDefault()">Google</a><br>
+    <a href="https://mail.ru" onclick="return false;">Mail.ru</a><br>
+    <a href="https://vk.com" onclick="event.preventDefault()">ВКонтакте</a><br>
+    <a href="javascript: void()">Ссылка в никуда</a><br>
+    <a href="http://html-plus.in.ua/obrabotka-sobytiya-onclick/">Обычная ссылка</a><br>
+    <hr>
+    <form name="testForm" id="testForm" class="test">
+        <p><label for="userName">Логин</label><input type="text" name="userName"></p>
+        <p><label for="userEmail">Email</label><input type="email" name="userEmail"></p>
+        <p><label for="userSite">Сайт</label><input type="url" name="userSite"></p>
+        <p><input type="submit" id="form-submit" value="Отправить"></p>
+    </form>
+    <script>
+        document.testForm.onsubmit = function(event){
+         //event.preventDefault()
+         if(this.userName.value.length < 4){
+             alert('Не менее 4х символов в логине!');
+             this.userName.focus();
+             return false;
+         }
+         if(this.userEmail.value.length < 10){
+             alert('Не менее 10х символов в Email!');
+             this.userEmail.focus();
+             return false;
+         }
+         if(this.userSite.value.indexOf('http') < 0){
+             alert('Неверный URL!');
+             this.userSite.focus();
+             return false;
+         }
+ 
+        } 
+     </script>
+
+</body></html>

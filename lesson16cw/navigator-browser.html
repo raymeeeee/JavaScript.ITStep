@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>navigator.userAgent/ browserName</title>
+<style>
+	body {
+		margin: 20px;
+		font-family: sans-serif;
+	}
+	.test {
+		border: 3px double #8791ec;
+		padding: 15px;
+		max-width: 650px;
+		margin: 20px auto;
+		line-height: 1.5;
+	}
+	button {
+		display: inline-block;
+		background-color: #8791ec;
+		color: #fff;
+		padding: 10px 25px;
+		border: none;
+		margin: 10px 0;
+	}
+</style>
+</head>
+
+<body>
+<div class="test">
+	<p>Вы используете браузер <b id="nameOfBrowser">...</b></p>
+	<p id="navigatorPropValue"></p>
+	<button onclick="nameOfBrowser.innerHTML = getBrowser(); this.style.display='none'">Узнать</button>
+</div>
+<script>
+	
+function getBrowser() {
+	const ua = navigator.userAgent;
+	navigatorPropValue.innerHTML = `<p>Значение свойства <b>navigator.userAgent</b>: ${ua}</p>`;
+	if (ua.includes("Firefox/")) return "Firefox";
+	if (ua.includes("Edg/")) return "Edge";
+	if (ua.includes("OPR/") || ua.includes("Opera")) return "Opera";
+	if (ua.includes("YaBrowser/") || ua.includes("Opera")) return "Yandex";
+	if (ua.includes("Chrome/") && !ua.includes("Edg/") && !ua.includes("OPR/")) return "Chrome";
+	if (ua.includes("Safari/") && !ua.includes("Chrome")) return "Safari";
+	if ((ua.includes("MSIE") != -1) || (!document.documentMode == true))	return 'IE';
+	return "Unknown";
+}
+
+</script>
+</body>
+
+</html>

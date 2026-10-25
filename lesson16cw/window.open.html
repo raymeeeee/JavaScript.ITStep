@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Popup Window Example</title>
+</head>
+<body>
+    <h1>Відкрити спливаюче вікно з параметрами</h1>
+    <form id="popupForm">
+        <p><label><input type="checkbox" id="cbToolbar"> Панель інструментів (toolbar)</label></p>
+        <p><label><input type="checkbox" id="cbLocation"> Рядок адреси (location)</label></p>
+        <p><label><input type="checkbox" id="cbMenubar"> Меню (menubar)</label></p>
+        <p><label><input type="checkbox" id="cbResizable"> Змінюване (resizable)</label></p>
+        <p><label><input type="checkbox" id="cbScrollbars"> Прокручування (scrollbars)</label></p>
+        <p><label><input type="checkbox" id="cbStatus"> Статус (status)</label></p>
+        <p>Ширина: <input type="number" id="width" value="400"></p>
+        <p>Висота: <input type="number" id="height" value="300"></p>
+        <p>Верх: <input type="number" id="top" value="100"></p>
+        <p>Ліворуч: <input type="number" id="left" value="100"></p>
+        <p>
+            <label><input type="radio" name="contentType" value="google" checked> Google</label>
+            <label><input type="radio" name="contentType" value="custom"> Користувацький</label>
+        </p>
+        <p>
+            <button type="button" id="openButton">Відкрити вікно</button>
+            <button type="button" id="closeButton" disabled>Закрити вікно</button>
+        </p>
+    </form>
+
+    <script>
+        let popupWindow;
+
+        document.getElementById('openButton').onclick = function() {
+            let features = [];
+            features.push("toolbar=" + (document.getElementById('cbToolbar').checked ? "yes" : "no"));
+            features.push("location=" + (document.getElementById('cbLocation').checked ? "yes" : "no"));
+            features.push("menubar=" + (document.getElementById('cbMenubar').checked ? "yes" : "no"));
+            features.push("resizable=" + (document.getElementById('cbResizable').checked ? "yes" : "no"));
+            features.push("scrollbars=" + (document.getElementById('cbScrollbars').checked ? "yes" : "no"));
+            features.push("status=" + (document.getElementById('cbStatus').checked ? "yes" : "no"));
+            features.push("width=" + document.getElementById('width').value);
+            features.push("height=" + document.getElementById('height').value);
+            features.push("top=" + document.getElementById('top').value);
+            features.push("left=" + document.getElementById('left').value);
+
+            let contentType = document.querySelector('input[name="contentType"]:checked').value;
+            if (contentType === "google") {
+                popupWindow = window.open("https://www.google.com", "PopupWindow", features.join(","));
+            } else {
+                popupWindow = window.open("", "PopupWindow", features.join(","));
+                popupWindow.document.write(`
+                    <!DOCTYPE html>
+                    <html lang="uk">
+                    <head><meta charset="UTF-8"><title>Popup</title></head>
+                    <body>
+                        <h1>Користувацьке спливаюче вікно</h1>
+                        <button id="sendMessage">Надіслати повідомлення в головне вікно</button>
+                        <script>
+                            document.getElementById('sendMessage').onclick = function() {
+                                window.opener.postMessage("Привіт з спливаючого вікна!", "*");
+                            };
+                        <\/script>
+                    </body>
+                    </html>
+                `);
+                popupWindow.document.close();
+            }
+
+            document.getElementById('closeButton').disabled = false;
+        };
+
+        document.getElementById('closeButton').onclick = function() {
+            if (popupWindow) {
+                popupWindow.close();
+                popupWindow = null;
+                this.disabled = true;
+            }
+        };
+
+        window.addEventListener('message', function(event) {
+            alert("Отримано повідомлення: " + event.data);
+        });
+    </script>
+</body>
+</html>

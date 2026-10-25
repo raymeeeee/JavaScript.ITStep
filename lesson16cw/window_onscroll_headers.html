@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;&display=swap" rel="stylesheet">
+	<title>headers size with window.onscroll</title>
+	<style>
+		* {
+			-webkit-transition: all 0.1s ease-in;
+			transition: all 0.1s ease-in;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: #fefefe;
+			font-family: "Lato", sans-serif;
+			color: #fff;
+		}
+
+		h1 {
+			margin: 0px;
+			padding: 0px;
+			font-size: 30px;
+			font-weight: 100;
+			text-align: center;
+			padding: 2rem 0px;
+		}
+
+		nav {
+			width: 100%;
+			height: 70px;
+			line-height: 70px;
+			background: #ECF0F1;
+			margin: 0% auto;
+			font-size: 11pt;
+			font-family: "PT Sans", Arial, sans-serif;
+			font-weight: bold;
+			position: fixed;
+			clear: both;
+			overflow: hidden;
+			box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+		}
+
+		nav .brand {
+			float: left;
+			font-weight: bold;
+			height: inherit;
+			color: #34495e !important;
+			display: inline-block;
+			width: 100px;
+			text-align: center;
+			text-decoration: none;
+			line-height: inherit;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		nav ul {
+			padding: 0;
+			margin: 0 auto !important;
+			float: right;
+			max-width: 100%;
+		}
+
+		nav ul li {
+			list-style: none;
+			float: left;
+		}
+
+		nav ul li a {
+			color: #34495e !important;
+			display: inline-block;
+			width: 100px;
+			line-height: inherit;
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 100;
+		}
+
+		nav ul li a:hover,
+		nav ul li a:active {
+			background-color: #ddd;
+		}
+
+		.section {
+			width: 100%;
+			min-height: 100vh;
+			padding: 60px 0;
+		}
+
+		.lorem {
+			background: #3498db;
+		}
+
+		.ipsum {
+			background: #e74c3c;
+		}
+
+		.dolor {
+			background: #e67e22;
+		}
+
+		.amet {
+			background: #f39c12;
+		}
+
+		.volu {
+			background: #1abc9c;
+		}
+
+		.nesci {
+			background: #34495e;
+		}
+
+		/* Helper class */
+		.small {
+			height: 70px !important;
+			line-height: 70px;
+		}
+
+		.container-inner {
+			width: 90%;
+			max-width: 800px;
+			margin: auto;
+		}
+
+		
+	</style>
+</head>
+
+<body>
+	<nav>
+		<a href="" class="brand">Bento</a>
+		<ul>
+			<li><a href="#lorem">Lorem</a></li>
+			<li><a href="#ipsum">Ipsum</a></li>
+			<li><a href="#dolor">Dolor</a></li>
+			<li><a href="#amet">Amet</a></li>
+			<li><a href="#volu">Volu </a></li>
+			<li><a href="#nesci">Nesci</a></li>
+		</ul>
+	</nav>
+
+
+	<section id="lorem" class="section lorem">
+		<div class="container-inner">
+			<h1>Lorem</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quam ullam atque aut assumenda voluptate deleniti
+				inventore officia ratione perferendis.</p>
+			<p>Sed voluptas ab nesciunt ea tenetur blanditiis ex sequi natus minima, illo odit, sit excepturi officia eaque
+				omnis recusandae rem?</p>
+		</div>
+	</section>
+
+	<section id="ipsum" class="section ipsum">
+		<div class="container-inner">
+			<h1>Ipsum</h1>
+
+			<p>Culpa provident, sunt molestias tenetur, illo officia quod quae vero debitis quam, fuga cupiditate magni itaque
+				voluptas accusantium. Repellat, ea voluptates dolorem quos delectus animi reiciendis? Cum error neque ratione!
+			</p>
+			<p>Aspernatur tempora dolorem repudiandae autem modi assumenda suscipit sit commodi harum laboriosam quasi beatae
+				quis dolores cumque, atque numquam unde veritatis ea ipsum sunt doloremque. Quod, non doloribus? Expedita,
+				illum.</p>
+
+		</div>
+	</section>
+
+	<section id="dolor" class="section dolor">
+		<div class="container-inner">
+			<h1>Dolor</h1>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est illo quis officia dolor voluptatibus dignissimos.
+				Doloremque, cumque excepturi? Dolorem animi nesciunt debitis quos magnam excepturi vel, eos error assumenda
+				velit!</p>
+			<p>Quis, minima perferendis! Officiis iusto fugiat, eum inventore aut eius dolor non veritatis cum dignissimos at
+				dicta modi nulla nobis nesciunt quae molestias, repellat distinctio. Fugiat illum natus nam dolore!</p>
+		</div>
+	</section>
+
+	<section id="amet" class="section amet">
+		<div class="container-inner">
+			<h1>Amet</h1>
+			<p>Ratione doloribus repellat, explicabo quia laudantium consequatur. Explicabo doloribus amet porro quam possimus
+				ab unde hic ullam nisi doloremque dolor qui fugiat, temporibus quia voluptatibus est vel perspiciatis quis quo.
+			</p>
+			<p>Officia quis nihil facilis aliquid! Pariatur autem quas commodi ea laboriosam perferendis mollitia distinctio
+				quidem rem doloribus perspiciatis reprehenderit, ducimus, eum fugit, aliquam vitae explicabo inventore.
+				Quibusdam ducimus est sunt!</p>
+		</div>
+	</section>
+
+	<section id="volu" class="section volu">
+		<div class="container-inner">
+			<h1>Volu</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus culpa sint, veritatis nisi quasi iste
+				molestiae ipsum repellat voluptas placeat accusamus sapiente non cupiditate quis deleniti quibusdam corrupti
+				numquam officia?</p>
+			<p>Facilis eveniet, accusamus sunt eius aspernatur voluptate eaque impedit porro aliquid nisi dolorem laudantium
+				est rem aliquam voluptatibus quisquam doloremque sit. Ipsum ex pariatur exercitationem nobis atque eum dolorum
+				aut?</p>
+
+		</div>
+	</section>
+
+	<section id="nesci" class="section nesci">
+		<div class="container-inner">
+			<h1>Nesci</h1>
+			<p>Necessitatibus nam deserunt, deleniti, aliquam placeat provident animi ex fugiat maiores quasi temporibus
+				voluptatibus quod libero alias consequuntur nesciunt unde? Quidem in ullam, nihil qui eos debitis numquam maxime
+				distinctio?</p>
+			<p>Neque repellendus ducimus sint eligendi delectus necessitatibus saepe amet? Deserunt eum odit aspernatur velit
+				ipsa, assumenda nobis ad provident temporibus perspiciatis suscipit. Voluptatem fugiat, neque sunt mollitia
+				incidunt labore debitis?</p>
+		</div>
+	</section>
+	<script src="js/headers-onscroll.js"></script>
+</body>
+
+</html>

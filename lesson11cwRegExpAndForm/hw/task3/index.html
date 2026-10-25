@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        input, button {
+            padding: 8px 12px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        .valid {
+            color: green;
+        }
+        .invalid {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 3</h1>
+    
+    <div class="container">
+        <h2>1. Проверка формата времени (HH:MM)</h2>
+        <input type="text" id="timeInput" placeholder="Введите время (например: 08:37)">
+        <button onclick="checkTime()">Проверить</button>
+        <div id="timeResult" class="result"></div>
+    </div>
+    
+    <div class="container">
+        <h2>2. Статистика строки</h2>
+        <input type="text" id="stringInput" placeholder="Введите любую строку">
+        <button onclick="showStats()">Показать статистику</button>
+        <div id="statsResult" class="result"></div>
+    </div>
+    
+    <div class="container">
+        <h2>3. Замена символов</h2>
+        <input type="text" id="swapInput" placeholder="Введите строку для преобразования">
+        <button onclick="swapChars()">Преобразовать</button>
+        <div id="swapResult" class="result"></div>
+    </div>
+
+    <script>
+
+        function validateTime(input) {
+            const timeRegex = /^([01]?[0-9]|2[0-3]):([0-5][0-9])$/;
+            return timeRegex.test(input);
+        }
+        
+        function checkTime() {
+            const input = document.getElementById('timeInput').value;
+            const resultDiv = document.getElementById('timeResult');
+            
+            if (validateTime(input)) {
+                resultDiv.textContent = `Время "${input}" введено правильно!`;
+                resultDiv.className = 'result valid';
+            } else {
+                resultDiv.textContent = `"${input}" - неверный формат времени! Используйте HH:MM (00-23:00-59)`;
+                resultDiv.className = 'result invalid';
+            }
+        }
+        
+
+        function stringStats(str) {
+            const letterCount = (str.match(/[a-zA-Zа-яА-Я]/g) || []).length;
+            const digitCount = (str.match(/\d/g) || []).length;
+            const otherCount = str.length - letterCount - digitCount;
+            
+            return {
+                letters: letterCount,
+                digits: digitCount,
+                others: otherCount
+            };
+        }
+        
+        function showStats() {
+            const input = document.getElementById('stringInput').value;
+            const resultDiv = document.getElementById('statsResult');
+            const stats = stringStats(input);
+            
+            resultDiv.innerHTML = `
+                <p>Исходная строка: "${input}"</p>
+                <p>Букв: ${stats.letters}</p>
+                <p>Цифр: ${stats.digits}</p>
+                <p>Других символов: ${stats.others}</p>
+                <p>Всего символов: ${input.length}</p>
+            `;
+        }
+        
+
+        function swapCharacters(str) {
+            return str.split('').map(char => {
+                if (/[A-Z]/.test(char)) {
+                    return char.toLowerCase();
+                } else if (/[a-z]/.test(char)) {
+                    return char.toUpperCase();
+                } else if (/\d/.test(char)) {
+                    return '_';
+                } else {
+                    return char;
+                }
+            }).join('');
+        }
+        
+        function swapChars() {
+            const input = document.getElementById('swapInput').value;
+            const resultDiv = document.getElementById('swapResult');
+            const result = swapCharacters(input);
+            
+            resultDiv.innerHTML = `
+                <p>Исходная строка: "${input}"</p>
+                <p>Результат: "${result}"</p>
+            `;
+        }
+    </script>
+</body>
+</html>

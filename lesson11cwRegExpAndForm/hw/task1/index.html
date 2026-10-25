@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .select-container {
+            margin-bottom: 20px;
+        }
+        
+        select {
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            min-width: 250px;
+        }
+        
+        #citySelect {
+            display: none;
+        }
+        
+        #cityImage {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: none;
+        }
+        
+        .image-container {
+            text-align: center;
+        }
+        
+        .image-title {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose country and city</h1>
+    
+    <div class="select-container">
+        <label for="countrySelect">Country:</label>
+        <select id="countrySelect">
+            <option value="">-- Choose country --</option>
+            <option value="france">France</option>
+            <option value="italy">Poland</option>
+            <option value="japan">Japan</option>
+        </select>
+    </div>
+    
+    <div class="select-container">
+        <label for="citySelect">City:</label>
+        <select id="citySelect">
+            <option value="">-- Choose city --</option>
+        </select>
+    </div>
+    
+    <div class="image-container">
+        <img id="cityImage" src="" alt="Изображение города">
+        <div id="imageTitle" class="image-title"></div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const countrySelect = document.getElementById('countrySelect');
+            const citySelect = document.getElementById('citySelect');
+            const cityImage = document.getElementById('cityImage');
+            const imageTitle = document.getElementById('imageTitle');
+            
+            const citiesData = {
+                france: {
+                    name: "Paris",
+                    cities: [
+                        { name: "Paris", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/960px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg" },
+                        { name: "Biarritz", image: "https://images.ctfassets.net/zmjc9gr9hbbf/5RKEfQjzISDIgHbKti8TWq/b5c527763a814ebb1786085e0ab3a0a5/St_Biarritz_2700px_AQU36797.jpg?w=1980" },
+                        { name: "Lyon", image: "https://asset-prod.france.fr/Lyon_465_0aa1fb749e.jpg" }
+                    ]
+                },
+                italy: {
+                    name: "Poland",
+                    cities: [
+                        { name: "Poznan", image: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Old_marketplace_and_city_hall_in_Pozna%C5%84.jpg" },
+                        { name: "Warsaw", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Aleja_Niepdleglosci_Warsaw_2022_aerial_%28cropped%29.jpg/960px-Aleja_Niepdleglosci_Warsaw_2022_aerial_%28cropped%29.jpg" },
+                        { name: "Krakow", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyYZztyykzR7XAjpIrvdnlCMk4KkGMu-Iog&s" }
+                    ]
+                },
+                japan: {
+                    name: "Japan",
+                    cities: [
+                        { name: "Tokyo", image: "https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/gettyimages-1390815938?_a=BAVAZGDX0" },
+                        { name: "Kyoto", image: "https://boutiquejapan.com/wp-content/uploads/2019/07/yasaka-pagoda-higashiyama-kyoto-japan-1140x761.jpg" },
+                        { name: "Osaka", image: "https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2020/06/osaka-dotonbori-iStock-1138049211-1024x683.jpg" }
+                    ]
+                }
+            };
+            
+            countrySelect.addEventListener('change', function() {
+                const selectedCountry = this.value;
+                
+                citySelect.innerHTML = '<option value="">-- Choose city --</option>';
+                cityImage.style.display = 'none';
+                imageTitle.textContent = '';
+                
+                if (selectedCountry) {
+                    citySelect.style.display = 'block';
+                    
+                    citiesData[selectedCountry].cities.forEach(city => {
+                        const option = document.createElement('option');
+                        option.value = city.image;
+                        option.textContent = city.name;
+                        citySelect.appendChild(option);
+                    });
+                } else {
+                    citySelect.style.display = 'none';
+                }
+            });
+            
+            citySelect.addEventListener('change', function() {
+                const selectedImage = this.value;
+                
+                if (selectedImage) {
+                    cityImage.src = selectedImage;
+                    cityImage.style.display = 'block';
+                    imageTitle.textContent = `${citySelect.options[citySelect.selectedIndex].text}, ${citiesData[countrySelect.value].name}`;
+                } else {
+                    cityImage.style.display = 'none';
+                    imageTitle.textContent = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

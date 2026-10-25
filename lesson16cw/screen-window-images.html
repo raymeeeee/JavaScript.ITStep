@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modal Window for Images</title>
+	<style>
+		* {
+			font-family: sans-serif;
+		}
+
+		.test {
+			width: 90%;
+			max-width: 1000px;
+			margin: 40px auto;
+		}
+
+		.test-img {
+			display: inline-block;
+			width: 300px;
+			height: 200px;
+			overflow: hidden;
+			margin-right: 10px;
+			border: 2px solid #ccc;
+		}
+
+		.red-border {
+			border-color: #e51039;
+		}
+
+		.blue-border {
+			border-color: #2f92e6;
+		}
+
+		.test-img img {
+			max-width: 100%;
+		}
+
+		.bg-modal {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.65);
+			display: flex;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.bg-modal:before {
+			content: '×';
+			font-size: 45px;
+			font-weight: bold;
+			color: #fff;
+			display: block;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+
+		.control {
+			margin: 10px 0;
+		}
+
+		button {
+			text-decoration: none;
+			background: #3db6ed;
+			padding: 8px 16px;
+			color: #fff;
+			border-radius: 2px;
+			font-weight: 700;
+			font-size: 0.9em;
+			border: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="test">
+		<a href="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=faces&fit=crop&w=900&h=600"
+			class="test-img">
+			<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=faces&fit=crop&w=300&h=200"
+				alt="Notebook"></a>
+		<a href="https://images.unsplash.com/photo-1577590835286-1cdd24c08fd7?crop=faces&fit=crop&w=900&h=600"
+			class="test-img">
+			<img src="https://images.unsplash.com/photo-1577590835286-1cdd24c08fd7?crop=faces&fit=crop&w=300&h=200"
+				alt="Coffee"></a>
+		<a href="https://images.unsplash.com/photo-1586509595512-800193191f79?crop=faces&fit=crop&w=900&h=600"
+			class="test-img">
+			<img src="https://images.unsplash.com/photo-1586509595512-800193191f79?crop=faces&fit=crop&w=300&h=200"
+				alt="Milk"></a>
+		<div class="control">
+			<button class="button button-primary" onclick="func1()">Открыть в новом окне</button>
+			<button class="button button-dangerous" onclick="func2()">Открыть в модальном окне</button>
+		</div>
+	</div>
+	<script src="./screen-window-img.js"></script>
+</body>
+
+</html>

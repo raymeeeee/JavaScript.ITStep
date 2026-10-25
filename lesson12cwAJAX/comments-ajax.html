@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comments AJAX - JSON</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    .top, .wrapper {
+      max-width: 900px;
+      margin: 12px auto;
+      padding: 15px;
+    }
+    .top ul {
+      list-style-type: none;
+      padding: 0;margin: 0;
+      display: flex;
+    }
+    .top li {
+      margin-right: 10px;
+    }
+    .wrapper {
+      border: 2px dotted #ccc;
+    }
+    .comment {
+      border-bottom: 2px  dotted #ccc;
+      margin-bottom: 16px;
+    }
+    .comment-author {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    /**/
+    .ok {
+      color:green;
+    }
+    .ok::marker {
+      content: '\2713';
+    }
+    .no {
+      color: red
+    }
+    .no::marker {
+      content: ' - ';
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top">
+    <ul>
+      <li><a href="#post1">Post 1</a></li>
+      <li><a href="#post2">Post 2</a></li>
+      <li><a href="#post3">Post 3</a></li>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <div class="comment">
+      <div class="comment-author"><a href="mailto: some@gmail.com">Hillary</a></div>
+      <div class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, obcaecati ipsam sint sit accusantium libero excepturi placeat fugit expedita, quas tempore aliquam eaque nulla. Officia culpa cupiditate totam quae ab.</div>
+    </div>
+  </div>
+
+  <ul>
+    <li class="ok">Lorem ipsum dolor sit.</li>
+    <li class="ok">Commodi architecto et necessitatibus.</li>
+    <li class="ok">Odio nostrum explicabo illum?</li>
+    <li class="ok">Maxime commodi quia impedit.</li>
+    <li class="no">Lorem ipsum dolor sit.</li>
+    <li class="no">Officiis totam consequuntur repellendus?</li>
+    <li class="no">Cupiditate voluptate vitae nihil.</li>
+    <li class="no">Atque et doloremque repudiandae.</li>
+  </ul>
+
+  <script src="js/comments.js"></script>
+
+  
+</body>
+</html>

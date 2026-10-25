@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Overflow Text</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			font-size: 18px;
+		}
+		:root {
+			--text-pad: 8px;
+		}
+
+		#outline {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
+
+		.img-left {
+			float: left;
+			margin-right: var(--text-pad);
+			padding: var(--text-pad);
+			padding-left: 0;
+		}
+
+		.img-right {
+			float: right;
+			margin-left: var(--text-pad);
+			padding: var(--text-pad);
+			padding-right: 0;
+		}
+
+		.img {
+			height: 100px;
+			width: 100px;
+			border: 2px solid blue;
+		}
+
+		.small {
+			height: 50px;
+			width: 50px;
+		}
+
+		.medium {
+			height: 80px;
+			width: 80px;
+		}
+
+		.img-left+.img-left {
+			margin-left: calc(-1 * var(--text-pad));
+		}
+
+		.img-right+.img-right {
+			margin-right: calc(-1 * var(--text-pad));
+		}
+
+		.text {
+			padding: 0 var(--text-pad);
+			margin-top: var(--text-pad);
+		}
+
+		.container {
+			width: 90%;
+			max-width: 900px;
+			margin: 10px auto;
+			padding: 10px;
+			position: relative;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<canvas id="outline"></canvas>
+		<div class="img-left">
+			<div class="img">IMG</div>
+		</div>
+		<div class="img-left">
+			<div class="img medium">IMG</div>
+		</div>
+		<div class="img-left">
+			<div class="img small">IMG</div>
+		</div>
+		<div class="img-right">
+			<div class="img medium">IMG</div>
+		</div>
+		<div class="img-right">
+			<div class="img small">IMG</div>
+		</div>
+		<div class="text">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus expedita, facilis, hic id ipsa ipsam
+			laboriosam libero mollitia nam odio possimus recusandae sed similique tempore unde veniam vitae voluptatem
+			voluptates.
+		</div>
+		<div class="img-left">
+			<div class="img medium">IMG</div>
+		</div>
+		<div class="img-right">
+			<div class="img small">IMG</div>
+		</div>
+		<div class="text">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus expedita, facilis, hic id ipsa ipsam
+			laboriosam libero mollitia nam odio possimus recusandae sed similique tempore unde veniam vitae voluptatem
+			voluptates.
+		</div>
+		</canvas>
+		<script src="js/overflow-text.js"></script>
+</body>
+
+</html>

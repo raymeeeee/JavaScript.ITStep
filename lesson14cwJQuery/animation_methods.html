@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation methods</title>
+	
+	<style>
+		body {
+			width: 90%;
+			margin: 10px auto;
+			position: relative;
+			font-family: sans-serif;
+		}
+
+		#box {
+			background: red;
+			border: 2px solid #B30000;
+			width: 400px;
+			height: 400px;
+			margin: 10px 40px;
+		}
+
+		#box2 {
+			background: #0f0;
+			border: 2px solid green;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 10px;
+			left: 450px;
+		}
+
+		#methods {
+			overflow: hidden;
+			margin: 20px 10px;
+		}
+
+		fieldset {
+			width: 200px;
+			float: left;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box"></div>
+	<div id="box2"></div>
+	<div id="methods">
+		<h1>Animation methods</h1>
+		<fieldset>
+			<legend>Show/Hide</legend>
+			<a href="#">hide()</a><br>
+			<a href="#">show()</a><br>
+			<a href="#">toggle()</a><br>
+		</fieldset>
+		<fieldset>
+			<legend>fade</legend>
+			<a href="#">fadeIn()</a><br>
+			<a href="#">fadeOut()</a><br>
+			<a href="#">fadeTo()</a><br>
+			<a href="#">antiFadeTo</a><br>
+		</fieldset>
+		<fieldset>
+			<legend>slideUp/slideDown</legend>
+			<a href="#">slideUp()</a><br>
+			<a href="#">slideDown()</a><br>
+			<a href="#">slideToggle()</a>
+		</fieldset>
+		<fieldset>
+			<legend>animate</legend>
+			<a href="#">animate()</a><br>
+			<a href="#">2animate()</a><br>
+			<a href="#">stop()</a><br>
+		</fieldset>
+	</div>
+	<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, quasi. Veritatis accusantium fugit sint dolor repellat, tempore placeat iusto possimus recusandae deleniti rerum itaque aspernatur delectus, quam facilis voluptatibus nesciunt.</p>
+	<p>Amet dicta temporibus iusto non nobis. Corrupti minima dicta laudantium fugiat tempora quas, mollitia obcaecati nostrum veniam, sed ab reiciendis officia est vitae tenetur, fuga quia nobis incidunt adipisci? Quisquam!</p>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="animation_methods.js"></script>
+</body></html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms 2 Select</title>
+<style>
+	#wrap { width: 800px; margin: 20px auto; padding: 10px;}
+	fieldset {margin: 15px 5px; padding: 10px;}
+	table {
+	  width: 700px;
+	  border-collapse: collapse;	  
+	}
+	th, td {
+	  padding: 7px;
+	  border: 2px solid #3600D9;	
+	}
+	table input[type="text"] { text-align: right; }
+</style>
+<!-- <script src="js/forms2.js"></script> -->
+</head>
+<body>
+<div id="wrap">
+ 	<fieldset>
+ 		<legend>Выбор поисковика</legend>
+ 		<form name="f1">
+ 			<select name="search">
+ 				<option value="#">Выберите поисковик</option>
+ 				<option value="https://google.com.ua">Google</option>
+ 				<option value="https://yandex.ru">Yandex</option>
+ 				<option value="https://rambler.ru">Rambler</option>
+ 				<option value="https://meta.ua">Meta</option>
+ 			</select>
+ 		</form>
+ 	</fieldset>
+		<fieldset>
+ 		<legend>Выбор изображения</legend>
+		<div><img  id="pic" src="images/beaty&beast.jpg" width="600" title="Красавица и чудовище"></div>
+ 		<form name="f2">
+ 			<select name="choosePic">
+ 				<option value="images/beaty&beast.jpg">Красавица и чудовище</option>
+ 				<option value="images/pooh.jpg">Винни Пух</option>
+ 				<option value="images/mult.jpg">Лесная братва</option>
+ 				<option value="images/lifted.jpg">Украденный</option>
+ 			</select>
+ 		</form>
+ 	</fieldset>
+	<fieldset>
+ 		<legend>Submit формы</legend>
+		<form name="f3">
+			<div><textarea name="info" rows="5" cols="35" value=""></textarea></div>
+			<div><input type="submit" value="Отправить" name="submitBtn"></div>		
+ 		</form>
+ 	</fieldset>
+ 	<fieldset>
+ 		<legend>Курс Сайтостроение</legend>
+ 		<form name="edu_options">
+ 			<table id="edu_table">
+ 				<tr>
+ 					<th>Название курса</th>
+ 					<th>Тип обучения</th>
+ 					<th>Язык обучения</th>
+ 					<th>Стоимость</th>
+ 				</tr>
+ 				<tr>
+ 					<td>Photoshop</td>
+ 					<td>
+						<input type="radio" name="edu_type1" value="online" data-price="1000">Онлайн<br>
+ 						<input type="radio" name="edu_type1" value="auditoria" data-price="1400" checked>В аудитории
+ 					</td>
+ 					<td><input type="radio" name="edu_lang1" value="ru" data-price="300" checked>Русский<br>
+ 						<input type="radio" name="edu_lang1" value="ua" data-price="400">Украинский
+ 					</td>
+ 					<td><input type="text" name="edu_price1" value="" readonly></td>
+ 				</tr>
+				<tr>
+ 					<td>HTML5/CSS3</td>
+ 					<td>
+ 						<input type="radio" name="edu_type2" value="online" data-price="2000">Онлайн<br>
+ 						<input type="radio" name="edu_type2" value="auditoria" data-price="2400" checked>В аудитории
+ 					</td>
+ 					<td><input type="radio" name="edu_lang2" value="ru" data-price="400" checked>Русский<br>
+ 						<input type="radio" name="edu_lang2" value="ua" data-price="450">Украинский
+ 					</td>
+ 					<td><input type="text" name="edu_price2" value="" readonly></td>
+ 				</tr>
+				<tr>
+ 					<td>Основы JavaScript/jQuery</td>
+ 					<td>
+ 						<input type="radio" name="edu_type3" value="online" data-price="1900">Онлайн<br>
+ 						<input type="radio" name="edu_type3" value="auditoria" data-price="2300" checked>В аудитории
+ 					</td>
+ 					<td><input type="radio" name="edu_lang3" value="ru" data-price="300" checked>Русский<br>
+ 						<input type="radio" name="edu_lang3" value="ua" data-price="450">Украинский
+ 					</td>
+ 					<td><input type="text" name="edu_price3" value="" readonly></td>
+ 				</tr>
+				<tr>
+					<th colspan="3">Итого</th>
+					<th id="end_price"></th>
+				</tr>
+ 			</table>
+ 		</form>
+ 	</fieldset>
+	<script src="./script.js"></script>
+ </div>
+ 
+</body>
+</html>

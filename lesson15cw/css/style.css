@@ -1,0 +1,144 @@
+body {
+    font-size: 16px;
+}
+
+.btn.long {
+    min-width: 200px
+}
+
+.color {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.color::after {
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: -3px;
+    top: -3px;
+    border: 1px solid #666;
+    border-radius: 50%;
+}
+
+.color.active {
+    box-shadow: 0 0 8px green;
+}
+
+.product-photo:not(.active) {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.main-photo {
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade {
+    animation: fadeIn .5s ease-in;
+}
+
+.item-open,
+.item-close {
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+}
+
+.item-open::after,
+.item-close::after {
+    content: '+';
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.item-close::after {
+    content: ' - ';
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-modal {
+    background-color: #fff;
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    width: 50%;
+    max-width: 650px;
+}
+
+.my-modal-header .close {
+    width: 40px;
+    height: 40px;
+    color: #333;
+}
+
+.remove {
+    color: #f00;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#credit,
+#order {
+    display: none;
+}
+
+.cart-img {
+    width: 100px;
+}
+
+.cart-number {
+    width: 60px;
+}
+
+footer, .navbar {
+    color: #fff;
+    background-color: #0e101c;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    display: block;
+    color: #fff;
+}
+
+.footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}

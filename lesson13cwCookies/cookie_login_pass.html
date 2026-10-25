@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie index</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
+    <style>
+        .wrap {
+            width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Check cookie</h1>
+        <div class="wrap">
+            <form name="loginForm">
+                <div class="form-group">
+                    <label class="control-label">Input your name</label>
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">User name</span>
+                            </div>
+                            <input type="text" class="form-control" name="userName" id="userName">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Input your password</label>
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">User password</span>
+                            </div>
+                            <input type="password" class="form-control" name="userPass" id="userPass">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" style="width: 150px" id="loginBtn">Log in</button>
+                </div>
+            </form>
+        </div>
+        <div class="alert alert-primary mt-4" hidden>
+            <p class="h4"></p>
+        </div>
+    </div>
+    <script src="
+https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
+"></script>
+    <script src="./js/cookie-login.js"></script>
+</body>
+
+</html>

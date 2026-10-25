@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="jsCanvas" class="canvas"></canvas>
+  <div class="controls">
+    <div class="controls__range">
+      <input type="range" id="strokeRange" min="0.5" max="6.0" step=".5" value="2.5">
+    </div>
+    <div class="controls__btns">
+      <button id="btnFill">Заливка</button>
+      <button id="btnSave">Сохранить</button>
+    </div>
+    <div class="controls__colors" id="jsColors">
+      <div class="controls_color" style="background-color: #222"></div>
+      <div class="controls_color" style="background-color: #fff"></div>
+      <div class="controls_color" style="background-color: #f00"></div>
+      <div class="controls_color" style="background-color: #f90"></div>
+      <div class="controls_color" style="background-color: #ff0"></div>
+      <div class="controls_color" style="background-color: #0f0"></div>
+      <div class="controls_color" style="background-color: #3185c9"></div>
+      <div class="controls_color" style="background-color: #15156b"></div>
+      <div class="controls_color" style="background-color: #aa00ff"></div>
+    </div>
+  </div>
+  <script src="painter.js"></script>
+</body>
+</html>

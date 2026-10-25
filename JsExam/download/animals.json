@@ -1,0 +1,75 @@
+[
+  {
+    "Name":"Hanna",
+    "Country":	"Canada",
+    "Age": 2.3,
+    "Type":	"cat", 
+    "Image": "hanna.jpeg"
+  }, {
+    "Name":"Sesame",
+    "Country":"United States",
+    "Age": 3.5,
+    "Type":	"dog",
+    "Image": "Sesame.jpeg"
+  },  {
+    "Name":"Milky",
+    "Country":"United Kingdom",
+    "Age": 6,
+    "Type":	"dog",
+    "Image": "Milky.jpeg"
+  }, {
+    "Name":"Julian",
+    "Country":	"United States",
+    "Age": 4,
+    "Type":	"cat",
+    "Image": "julian.jpeg"
+  }, {
+    "Name":"Cesar&Nomi",
+    "Country":"United Kingdom",
+    "Age": 2,
+    "Type":	"cat",
+    "Image": "Cesar&Nomi.jpeg"
+  },{
+    "Name":"Tiny",
+    "Country":"Canada",
+    "Age": 1,
+    "Type":	"other",
+    "Image": "tiny.jpeg"
+  }, {
+    "Name":"Candle",
+    "Country":"Canada",
+    "Age": 4.5,
+    "Type":	"dog",
+    "Image": "Candle.jpeg"
+  },{
+    "Name":"Pearl",
+    "Country":"United States",
+    "Age": 1.5,
+    "Type":	"other",
+    "Image": "pearl.jpeg"
+  }, {
+    "Name":"Tinkerbell",
+    "Country":"United Kingdom",
+    "Age": 1.5,
+    "Type":	"other",
+    "Image": "tinkerbell.jpeg"
+  }, {
+    "Name":"HanHan",
+    "Country":"Canada",
+    "Age": 5,
+    "Type":	"dog",
+    "Image": "HanHan.jpeg"
+  },{
+    "Name":"Gouzi",
+    "Country":"United Kingdom",
+    "Age": 2,
+    "Type":	"other",
+    "Image": "Gouzi.jpeg"
+  },{
+    "Name":"GaoGao",
+    "Country":	"United States",
+    "Age": 3.8,
+    "Type":	"cat", 
+    "Image": "GaoGao.jpeg"
+  }
+]

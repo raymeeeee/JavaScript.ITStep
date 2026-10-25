@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Погода по геолокации</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    #weather { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Погода у вас</h1>
+  <button onclick="getWeather()">Показать погоду</button>
+  <div id="weather">Ожидаем запрос…</div>
+
+  <script>
+		//https://home.openweathermap.org/api_keys
+    //const apiKey = "YOUR_API_KEY"; // ← вставь сюда свой ключ
+    const apiKey = "24e737f0c390b75acec804699917dac2"; // ← вставь сюда свой ключ
+		if( navigator.geolocation ){
+			 let to = 1000 * 30;  //1000 times 30 = 30 seconds
+    let max = 1000 * 60 * 60;  //1000 * 60 * 60 = 1 hour
+    var params = {enableHighAccuracy: false, timeout:to, maximumAge:max};
+			console.log(navigator.geolocation.getCurrentPosition( reportPosition, gpsError, params )); 
+		}
+    function getWeather() {
+      const output = document.getElementById("weather");
+
+      if (!navigator.geolocation) {
+        output.textContent = "Геолокация не поддерживается в вашем браузере.";
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(success, error);
+
+      function success(position) {
+        const { latitude, longitude } = position.coords;
+
+        output.textContent = "Получаем погоду...";
+
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric&lang=ru`;
+
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            const temp = data.main.temp;
+            const desc = data.weather[0].description;
+            const city = data.name;
+
+            output.innerHTML = `🌍 ${city}<br>🌡 Температура: ${temp}°C<br>☁️ Состояние: ${desc}`;
+          })
+          .catch(() => {
+            output.textContent = "Ошибка при получении данных о погоде.";
+          });
+      }
+
+      function error() {
+        output.textContent = "Невозможно получить ваше местоположение.";
+      }
+    }
+  </script>
+</body>
+</html>

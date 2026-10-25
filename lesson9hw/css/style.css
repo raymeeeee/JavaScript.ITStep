@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 20px auto;
+  border: 2px dotted #ccc;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 200px;
+}
+
+#product-image {
+  width: 300px;
+  margin-left: 20px;
+}
+
+.choice a {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+.choice a.active,
+.choice a:hover {
+  font-weight: bold;
+}
+
+span.circle {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 2px dotted #555;
+  border-radius: 50%;
+}
+
+.choice a.active span.circle {
+  border: 7px double #999;
+}
+
+.price {
+  font-size: 2.5em;
+  color: #f00;
+}
+
+.price::after {
+  content: " грн.";
+}
+
+table {
+  border: 2px solid #555;
+  border-collapse: collapse;
+  background-color: lightpink;
+  margin: 20px auto;
+  text-align: center;
+}
+
+td {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #555;
+  position: relative;
+}
+
+.line::before,
+.line-vertical::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+  display: block;
+  width: 100%;
+  background: #882727;
+  z-index: 2;
+}
+.line-vertical::before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.line-diagonal-left::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 145%;
+}
+.line-diagonal-right::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 145%;
+}
+
+@media (max-width: 800px){
+    .wrapper {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .col {
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 480px){ 
+    .col {
+        max-width: none;
+        width: 100%;
+    }
+    td {
+        width: 110px;
+        height: 110px;
+    }
+}

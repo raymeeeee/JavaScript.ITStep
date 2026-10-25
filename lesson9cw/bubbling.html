@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bubbling</title>
+    <style>
+         span {display: block;}
+        div,span {
+            min-width: 200px;
+            max-width: 400px;
+            min-height: 200px;
+            max-height: 400px;
+            border: 2px solid #900;
+            padding: 20px;
+        }
+       
+        #first, #d1 {background: #f90;}
+        #second, #d2 { background: #a30b4b;}
+        #third, #d3 { background: #fde;}
+    </style>
+</head>
+<body>
+    <div id="first">
+       <strong>first</strong>
+        <div id="second">
+           <strong>second</strong>
+            <div id="third">Всплытие - Самый вложенный элемент <strong>third</strong></div>
+        </div>
+    </div>
+       
+    <span id="d1">
+       <strong>d1</strong>
+        <span id="d2">
+           <strong>d2</strong>
+            <span id="d3">Перехват - Самый вложенный элемент <strong>d3</strong></span>
+        </span>
+    </span>
+       
+  
+    <script>
+    var div = document.getElementsByTagName("div");
+    var span = document.getElementsByTagName("span");
+ //Чтобы поймать событие на стадии перехвата, нужно использовать третий аргумент addEventListener:
+
+//    Если аргумент true, то событие будет перехвачено по дороге вниз.
+//    Если аргумент false, то событие будет поймано при всплытии.
+
+        for(var i=0, len=div.length; i<len; i++){   
+            div[i].addEventListener("click", bubble, false);
+           
+            span[i].addEventListener("click", highlight, true);
+        }
+        
+        function bubble(e){
+            //console.log(e.target, this);
+            this.style.backgroundColor = 'red';
+            alert(this.id);
+            this.style.backgroundColor = '';
+            //e.stopPropagation();
+        }
+        function highlight() {
+          this.style.backgroundColor = 'yellow';
+          alert(this.id);
+          this.style.backgroundColor = '';
+        }
+    </script>
+    <p>
+        <a href="https://learn.javascript.ru/event-bubbling">Почитать про всплытие и перехват на learn.javascript.ru</a>
+    </p>
+    <p>
+        <a href="https://itchief.ru/lessons/javascript/javascript-bubble-event">Почитать про всплытие и перехват на itchief.ru</a>
+    </p>
+</body>
+</html>

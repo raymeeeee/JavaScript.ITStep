@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Event</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div>
+
+        <ul class="textList" style="padding: 20px;">
+            <li>Без труда не вытащишь и рыбку из пруда.</li>
+            <li>Не откладывай на завтра то, что можно сделать сегодня.</li>
+            <li>Старый друг лучше новых двух.</li>
+            <li>Язык до Киева доведёт.</li>
+            <li>Семь раз отмерь — один раз отрежь.</li>                  
+        </ul>
+
+        <p class="outputText" style="color: red; font-size: 20px;"></p>
+    </div>
+
+    <div class="wrapper">
+        <h2>Задание 2. Выбор цвета и цены футболки</h2>
+        <div class="row">
+            <div class="col">
+                <div class="choice">
+                    <a href="#" data-color="lightgray" class="active" data-price="133"><span class="circle"></span>Серый</a>
+                    <a href="#" data-color="green" data-price="145"><span class="circle"></span >Зеленый</a>
+                    <a href="#" data-color="black" data-price="122"><span class="circle"></span>Черный</a>
+                    <a href="#" data-color="pink" data-price="135"><span class="circle"></span>Розовый</a>
+                    <a href="#" data-color="maroon" data-price="148"><span class="circle"></span>Бордо</a>
+                </div>
+            </div>
+            <div class="col">
+                <img src="img/lightgray.webp" alt="Футболка мужская" id="product-image">
+            </div>
+            <div class="col">
+                <h3>Цена</h3>
+                <div class="price">133</div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h2>Крестики-нолики</h2>
+        <table id="game">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

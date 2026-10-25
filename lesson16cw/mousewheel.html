@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History state</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Josefin+Sans:400,600,700,400italic,600italic);
+
+    body {
+      margin: 0;
+      font-family: 'josefin sans';
+      font-size: 16px;
+    }
+
+    .hero {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 9;
+      transition: all 1.6s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .hero.scrolled {
+      transform: translate3d(0, -100%, 0) scale(.75);
+      opacity: 0;
+    }
+
+    .hero-inner {
+      background-image: url('https://images.unsplash.com/photo-1442188950719-e8a67aea613a?fit=crop&fm=jpg&h=975&q=80&w=1925');
+      background-size: cover;
+      background-position: center;
+      display: table;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+    }
+
+    .hero-title {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: montserrat;
+    }
+
+    .font-2 {
+      font-family: 'josefin sans';
+      font-weight: 700;
+    }
+
+    .title {
+      letter-spacing: .3em;
+      text-transform: uppercase;
+    }
+
+    .text-light {
+      color: #fff
+    }
+
+    .font-alt {
+      font-family: 'georgia';
+      font-style: italic;
+      color: #666;
+    }
+
+    .hero {
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      background-color: #fff;
+      border-top: 10px solid black;
+      padding: 0;
+      margin: 0;
+      transition: all 1.6s cubic-bezier(0.86, 0, 0.07, 1);
+      transform: translate3d(0, 20px, 0) scale(.75);
+      opacity: 0;
+    }
+
+    .content.scrolled {
+      transform: translate3d(0, 0, 0) scale(1);
+      opacity: 1;
+    }
+
+    .sd {
+      color: #fff;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .sd:hover,
+    .sd:focus {
+      color: #fff;
+      opacity: .7;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-title">
+        <h1 class="text-light title font-2">First Section</h1>
+        <p class="text-capitalize text-light">here starts awesomeness</p>
+      </div>
+      <a href="#" class="sd">Scroll Down</a>
+    </div>
+  </div>
+  <div class="content clearfix">
+    <div class="container" style="padding-top: 60px">
+      <div class="row">
+        <div class="col-md-5">
+          <h2 class="text-uppercase">Second Section</h2>
+          <p class="font-alt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui voluptatibus molestia!</p>
+        </div>
+        <div class="col-md-7">
+          <p style="padding-top: 47px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam earum eos
+            corporis totam vel, eaque sapiente officiis sint culpa inventore blanditiis hic cupiditate illo nam
+            assumenda reprehenderit suscipit dolorum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="height: 100vh"></div>
+  </div>
+  <script src="js/onmousewheel.js"></script>
+</body>
+
+</html>

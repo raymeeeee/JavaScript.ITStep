@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clone inputs</title>
+    <style>
+        * {font-family: sans-serif;}
+        body {margin: 20px 10%;}
+        input {padding: 4px;}
+        .plus-btn{
+            border-radius: 0 4px 4px 0;
+            padding: 4px 6px;
+            margin-left: -1px;
+            background-color: #259655;
+            color: #fff;
+        }
+        .plus-btn:active,.plus-btn:focus {
+            border-radius: 0 4px 4px 0;
+            background-color: #20ac26;
+        }
+    </style>
+</head>
+<body>
+   <h2>Клонируем элементы</h2>
+    <form name="cloneForm">
+        <p><input type="text" name="text1"><input type="button" value="+" class="plus-btn"></p>
+        <p><button id="formSubmit">Отправить</button></p>
+    </form>
+    <script src="./cloneInputs.js"></script>
+</body>
+</html>

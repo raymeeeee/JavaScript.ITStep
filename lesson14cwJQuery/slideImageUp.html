@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Slide Image Up</title>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            font-family: Tahoma;
+            font-size: 12px;
+            color: #fff;
+            line-height: 150%;
+            background-color: #6081c4;
+        }
+        h1 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        #container {
+            width: 960px;
+            margin: 55px auto;
+        }
+        div.slideBox {
+            width: 325px;
+            height: 325px;
+            position: relative;
+            overflow: hidden;
+            float: left;
+            margin-right: 25px;
+            border: 5px solid #ccc;
+        }
+        div.slideBox img {
+            position: absolute;
+            z-index: 2;
+            width: 325px;
+            height: 325px;
+        }
+        div.slideBox div.content {
+            position: absolute;
+            z-index: 1;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div class="slideBox">
+            <img src="img/picture1.jpg" alt="testing" />
+
+            <div class="content">
+                <h1>HTML Ipsum Presents</h1>
+                <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+            </div>
+
+        </div> <!--end slideBox-->
+
+    <div class="slideBox">
+        <img src="img/picture2.jpg" alt="testing" />
+
+        <div class="content">
+            <h1>HTML Ipsum Presents</h1>
+            <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+        </div>
+
+    </div> <!--end slideBox-->
+
+    </div>
+    <!--end container-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="slideImageUp.js"></script>
+</body>
+
+</html>

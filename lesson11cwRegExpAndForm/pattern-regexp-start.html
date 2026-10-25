@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pattern RegExp</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		fieldset {
+			border: 1px solid #ccc;
+			border-radius: 6px;
+			padding: 15px 15px 5px;
+			margin-bottom: 15px;
+		}
+		legend {
+			float: none;
+			width: auto;
+			padding: 4px;
+			margin: unset;
+			font-size: 1.2em;
+			font-weight: bolder;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="my-3 text-primary">Валидация форм с помощью регулярных выражений</h1>
+		<h2 class="mb-3">Диапазоны символов</h2>
+		<fieldset>
+			<legend>Проверка имени пользователя (символ ^)</legend>
+				<form name="login1" class="row">
+					<div class="col-md-6 mb-3">
+						<label class="form-label" for="addName">Введите логин</label>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input type="text" class="form-control" pattern="" id="addName" name="addName" required>
+					</div>
+					<div class="col-md-2 mb-3"><input type="submit" value="Проверить" id="nameBtn" class="btn btn-secondary"></div>
+				</form>
+		</fieldset>
+		<fieldset>
+			<legend>Маска для номера телефона</legend>
+				<form name="phoneForm" class="row">
+					<div class="col-md-6 mb-3">
+						<label class="form-label" for="phone">Введите номер телефона</label>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input type="text" class="form-control" id="phone" name="phone" required>
+					</div>
+					<div class="col-md-2 mb-3"><input type="submit" value="Проверить" id="phoneBtn" class="btn btn-primary"></div>
+				</form>
+		</fieldset>
+		<h2 class="mb-3">Начало и конец строки	(символы ^ и $)</h2>
+		<fieldset>
+			<legend>Проверка имени пользователя (символ ^)</legend>
+				<form name="loginAdd" class="row">
+					<div class="col-md-6 mb-3">
+						<label class="form-label" for="loginName">Введите аккаунт, начинающийся со слова user_<span class="text-danger">*</span>:<br>
+							<span class="text-muted d-inline-block mt-2">* В конце добавьте от 2х до 4х цифр</span>
+						</label>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input type="text" class="form-control" pattern="" id="loginName" name="loginName" required>
+					</div>
+					<div class="col-md-2 mb-3"><input type="submit" value="Проверить" id="loginBtn" class="btn btn-warning"></div>
+				</form>
+		</fieldset>
+		<fieldset>
+			<legend>Проверка расширения файла изображения (символ $)</legend>
+				<form name="pictureAdd" class="row">
+					<div class="col-md-6 mb-3">
+						<label class="form-label" for="picName">Введите название файла<span class="text-danger">*</span>:<br>
+							<span class="text-muted d-inline-block mt-2">* Только jpg, png, webp</span>
+						</label>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input type="text" class="form-control" pattern="" id="picName" name="picName" required>
+					</div>
+					<div class="col-md-2 mb-3"><input type="submit" value="Проверить" id="picBtn" class="btn btn-success"></div>
+				</form>
+		</fieldset>
+		<fieldset>
+			<legend>X-net (Twitter) account (символы ^ и $)</legend>
+				<form name="twitVal" class="row">
+					<div class="col-md-6 mb-3">
+						<label class="form-label" for="twitName">Введите логин из 1-15 символов, начиная с символа @:</label>
+					</div>
+					<div class="col-md-4 mb-3">
+						<input type="text" class="form-control" pattern="" id="twitName" name="twitName" required>
+					</div>
+					<div class="col-md-2 mb-3"><input type="submit" value="Проверить" id="twitBtn" class="btn btn-primary"></div>
+				</form>
+		</fieldset>
+	</div>
+	<div class="container">
+		<h2>Text with links</h2>
+		<div class="row">
+			<div class="col-md-4 mb-3">
+				<h3>Column 1</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum facilis quibusdam id suscipit <a href="https://picsart.com/ru/">AI Pixart</a> illum deserunt sed assumenda architecto possimus, laudantium quisquam tempore officia magni? Labore alias similique vel aliquam!</p>
+				<a href="https://regex101.com" class="btn btn-primary">Read More</a>
+			</div>
+			<div class="col-md-4 mb-3">
+				<h3>Column 2</h3>
+				<p>Expedita dolorum nesciunt veritatis nulla facilis ipsa deserunt, voluptates laborum. Cupiditate, recusandae. Dolore fugit <a href="https://google.com.ua">Google</a> veritatis obcaecati saepe exercitationem ipsa quos suscipit nisi accusantium, enim, dignissimos molestiae animi maxime voluptatum quae?</p>
+				<a href="http://regexstorm.net/tester" class="btn btn-primary">Read More</a>
+			</div>
+			<div class="col-md-4 mb-3">
+				<h3>Column 3</h3>
+				<p>Optio, doloremque nostrum, hic dolores asperiores voluptatibus earum voluptatum nam magnam mollitia <a href="https://html-plus.in.ua/regular-expression-syntax/">minus deleniti</a> eaque vel tenetur! Officia, reiciendis possimus sapiente ducimus natus modi autem et impedit, dolor dignissimos eaque?</p>
+				<a href="https://www.phpliveregex.com/" class="btn btn-primary">Read More</a>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="linkTest">
+		<h2 class="text-success">Text with text links</h2>
+		<div class="row">
+			<div class="col-md-4 mb-3">
+				<h3>Column 1</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum facilis quibusdam id suscipit https://picsart.com/ru/. This is AI Pixart, illum deserunt sed assumenda architecto possimus, laudantium quisquam tempore officia magni? Labore alias similique vel aliquam!</p>
+				<p>See at https://regex101.com</p>
+			</div>
+			<div class="col-md-4 mb-3">
+				<h3>Column 2</h3>
+				<p>Expedita dolorum nesciunt veritatis nulla facilis ipsa deserunt, voluptates laborum. Cupiditate, recusandae. Dolore fugit search with Google https://google.com.ua veritatis obcaecati saepe exercitationem ipsa quos suscipit nisi accusantium, enim, dignissimos molestiae animi maxime voluptatum quae?</p>
+				<p>See at http://regexstorm.net/tester</p>
+			</div>
+			<div class="col-md-4 mb-3">
+				<h3>Column 3</h3>
+				<p>Optio, doloremque nostrum, hic dolores asperiores voluptatibus earum voluptatum nam magnam mollitia. Test with https://html-plus.in.ua/regular-expression-syntax/  minus delenitieaque vel tenetur! Officia, reiciendis possimus sapiente ducimus natus modi autem et impedit, dolor dignissimos eaque?</p>
+				<p>Read More at https://www.phpliveregex.com/</p>
+			</div>
+		</div>
+	</div>
+	<script src="./scirpt.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Window scroll()</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+			padding: 20px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		aside {
+			flex: 0 0 160px;
+		}
+
+		.toc {
+			position: fixed;
+			top: 20px;
+			background: #f0f0f0;
+			border: 1px solid #ccc;
+			padding: 15px;
+			border-radius: 8px;
+		}
+
+		.toc a {
+			display: block;
+			margin-bottom: 8px;
+			color: #007bff;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		section {
+			margin: 80px 0;
+		}
+
+		h2 {
+			margin-top: 100px;
+			color: #333;
+		}
+	</style>
+</head>
+
+<body>
+	<aside>
+		<div class="toc">
+			<strong>Содержание:</strong>
+			<a onclick="scrollToSection('section1')">Раздел 1</a>
+			<a onclick="scrollToSection('section2')">Раздел 2</a>
+			<a onclick="scrollToSection('section3')">Раздел 3</a>
+		</div>
+	</aside>
+
+	<main>
+		<section id="section1">
+			<h2>Раздел 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a risus id turpis accumsan vehicula. Suspendisse
+				sed consequat eros...</p>
+
+			<p>Dolor, nisi! Maxime eligendi soluta incidunt! Aliquam corporis pariatur quasi, eum iusto odit! Molestias
+				voluptas eligendi magnam inventore nobis, amet eum molestiae alias dignissimos vitae doloribus similique
+				explicabo voluptatibus autem?</p>
+			<p>Exercitationem illo atque maxime aperiam! Error aspernatur fugit quos aperiam exercitationem perferendis soluta
+				facere eaque necessitatibus quidem maiores non, laudantium odit ducimus mollitia? Obcaecati officia porro
+				eligendi, eaque tempore corporis!</p>
+			<p>Laboriosam, sint. Ratione dignissimos dolorem debitis delectus fugit. Laboriosam accusamus quos enim corrupti
+				nemo culpa officia minus? Sunt, excepturi similique praesentium adipisci nam eum beatae assumenda fugit eligendi
+				ex distinctio?</p>
+			<p>Sed modi laboriosam qui laborum voluptatibus quaerat sit quasi ad, aperiam, consequatur provident! Sapiente,
+				reprehenderit at a iusto nesciunt facilis quaerat consequuntur rem aliquam ullam possimus, velit cum iste
+				laudantium!</p>
+			<p>Quae ut nisi nesciunt et quia voluptatum iusto molestias, saepe sequi perspiciatis maiores eos impedit.
+				Adipisci voluptatibus sapiente perferendis iure. Officiis nemo laborum reprehenderit amet omnis error impedit.
+				Animi, atque!</p>
+
+		</section>
+
+		<section id="section2">
+			<h2>Раздел 2</h2>
+			<p>Curabitur sed felis eget velit faucibus mattis. Integer ac neque ac eros dignissim malesuada. Quisque sit amet
+				rhoncus neque...</p>
+			<p>Consectetur, eveniet sit assumenda voluptates porro repellendus officia! Nulla aliquid odit est, ipsum, maxime
+				eius officiis quisquam molestias facilis, rerum quaerat! Facilis nihil soluta excepturi quas ad nemo inventore
+				velit.</p>
+			<p>Nulla nesciunt cupiditate corrupti quasi aperiam velit vero qui suscipit recusandae, placeat incidunt
+				perferendis repellat nihil aut possimus accusantium ipsam sapiente architecto doloribus numquam laudantium
+				veniam. Recusandae quaerat et esse.</p>
+			<p>Suscipit doloremque iste hic id neque dolor nemo error facilis, molestiae consequuntur quisquam quas. Aliquid
+				molestias suscipit deserunt dicta neque explicabo, atque quae pariatur hic earum, reprehenderit et in quibusdam?
+			</p>
+		</section>
+
+		<section id="section3">
+			<h2>Раздел 3</h2>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quasi nemo exercitationem libero repellat quia
+				impedit esse maiores ea, dolor repellendus sequi necessitatibus distinctio id sed. Facere nemo atque aperiam!
+			</p>
+			<p>Voluptate ducimus vel exercitationem porro, dolore neque tenetur rem et praesentium earum provident illo, minus
+				nulla itaque magnam deserunt, soluta illum explicabo laudantium? Labore, nisi veniam quaerat totam maxime
+				nostrum.</p>
+			<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Aenean
+				vel neque vitae quam finibus...</p>
+		</section>
+	</main>
+	<script src="js/window-scroll-methods.js"></script>
+</body>
+
+</html>

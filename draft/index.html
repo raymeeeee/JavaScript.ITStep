@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph of y = (-n)^x</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        canvas {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Graph of y = (-n)<sup>x</sup></h1>
+        
+        <div class="controls">
+            <div>
+                <label for="nValue">n value: </label>
+                <input type="number" id="nValue" value="2" step="0.1" min="0.1">
+            </div>
+            <div>
+                <label for="xMin">x min: </label>
+                <input type="number" id="xMin" value="-3" step="0.1">
+            </div>
+            <div>
+                <label for="xMax">x max: </label>
+                <input type="number" id="xMax" value="3" step="0.1">
+            </div>
+            <div>
+                <label for="step">Step: </label>
+                <input type="number" id="step" value="0.1" step="0.01" min="0.01">
+            </div>
+            <button id="updateBtn">Update Graph</button>
+        </div>
+        
+        <div>
+            <canvas id="realChart"></canvas>
+        </div>
+        <div>
+            <canvas id="imaginaryChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Initialize charts
+        const realCtx = document.getElementById('realChart').getContext('2d');
+        const imagCtx = document.getElementById('imaginaryChart').getContext('2d');
+        
+        let realChart = new Chart(realCtx, {
+            type: 'line',
+            data: { datasets: [] },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: { display: true, text: 'Real Part' },
+                    tooltip: {
+                        callbacks: {
+                            label: (context) => `x: ${context.parsed.x.toFixed(2)}, Re(y): ${context.parsed.y.toFixed(4)}`
+                        }
+                    }
+                },
+                scales: { x: { title: { display: true, text: 'x' } } }
+            }
+        });
+        
+        let imaginaryChart = new Chart(imagCtx, {
+            type: 'line',
+            data: { datasets: [] },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: { display: true, text: 'Imaginary Part' },
+                    tooltip: {
+                        callbacks: {
+                            label: (context) => `x: ${context.parsed.x.toFixed(2)}, Im(y): ${context.parsed.y.toFixed(4)}`
+                        }
+                    }
+                },
+                scales: { x: { title: { display: true, text: 'x' } } }
+            }
+        });
+
+        // Complex power function
+        function complexPower(n, x) {
+            // (-n)^x = e^(x*(ln(n) + iπ)) = n^x * [cos(πx) + i sin(πx)]
+            const magnitude = Math.pow(n, x);
+            const real = magnitude * Math.cos(Math.PI * x);
+            const imag = magnitude * Math.sin(Math.PI * x);
+            return { real, imag };
+        }
+
+        // Update graphs
+        function updateGraphs() {
+            const n = parseFloat(document.getElementById('nValue').value);
+            const xMin = parseFloat(document.getElementById('xMin').value);
+            const xMax = parseFloat(document.getElementById('xMax').value);
+            const step = parseFloat(document.getElementById('step').value);
+            
+            // Generate data points
+            const points = [];
+            for (let x = xMin; x <= xMax; x += step) {
+                points.push(x);
+            }
+            
+            // Calculate values
+            const realValues = points.map(x => complexPower(n, x).real);
+            const imagValues = points.map(x => complexPower(n, x).imag);
+            
+            // Update charts
+            realChart.data.labels = points;
+            realChart.data.datasets = [{
+                label: `Re(y) where y = (-${n})^x`,
+                data: realValues.map((y, i) => ({x: points[i], y})),
+                borderColor: 'rgb(75, 192, 192)',
+                backgroundColor: 'rgba(75, 192, 192, 0.1)',
+                borderWidth: 2,
+                tension: 0.1,
+                pointRadius: 0
+            }];
+            
+            imaginaryChart.data.labels = points;
+            imaginaryChart.data.datasets = [{
+                label: `Im(y) where y = (-${n})^x`,
+                data: imagValues.map((y, i) => ({x: points[i], y})),
+                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgba(255, 99, 132, 0.1)',
+                borderWidth: 2,
+                tension: 0.1,
+                pointRadius: 0
+            }];
+            
+            realChart.update();
+            imaginaryChart.update();
+        }
+
+        // Initial draw
+        updateGraphs();
+        
+        // Event listeners
+        document.getElementById('updateBtn').addEventListener('click', updateGraphs);
+        
+        // Also update when pressing Enter in input fields
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') updateGraphs();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* * {box-sizing: border-box;} */
+body {
+  margin: 0px;
+  font-family: 'Cedarville Cursive', cursive;
+  background: url(https://source.unsplash.com/wG923J9naFQ/1920x1080) center/cover brown;
+}
+  
+#gallery {
+  width: 800px;
+  margin: auto;
+  padding-top: 40px;
+}
+#gallery::before, #gallery::after {
+  content: '';
+  display: table;
+}
+#gallery::after {
+  clear: both;
+}
+figure {
+  cursor: pointer;
+  float: left;
+  background-color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 1px 2px 3px black;
+  transition: .5s;
+  position: relative;
+  z-index: 1;
+}
+figure:hover {
+  box-shadow: 5px 10px 100px black;
+  transform: scale(1.1) rotate(0) !important;
+  z-index: 20;
+}
+figure img {
+  height: 150px;
+  margin: 0px;
+}
+
+
+
+
+

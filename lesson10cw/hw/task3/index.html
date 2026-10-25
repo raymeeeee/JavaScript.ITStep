@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .question h3 {
+            margin-top: 0;
+        }
+        
+        .options {
+            margin: 10px 0;
+        }
+        
+        .options label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test</h1>
+    
+    <form id="testForm">
+        <div id="question1" class="question">
+            <h3>Вопрос 1: Какой язык программирования является статически типизированным?</h3>
+            <div class="options">
+                <label>
+                    <input type="radio" name="q1" value="10" onclick="checkAnswer(1, this)"> TypeScript
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="-5" onclick="checkAnswer(1, this)"> JavaScript
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="-5" onclick="checkAnswer(1, this)"> Python
+                </label>
+            </div>
+        </div>
+        
+        <div id="question2" class="question hidden">
+            <h3>Вопрос 2: Какой метод добавляет элемент в конец массива?</h3>
+            <div class="options">
+                <label>
+                    <input type="radio" name="q2" value="-5" onclick="checkAnswer(2, this)"> shift()
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="10" onclick="checkAnswer(2, this)"> push()
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="-5" onclick="checkAnswer(2, this)"> unshift()
+                </label>
+            </div>
+        </div>
+        
+        <div id="question3" class="question hidden">
+            <h3>Вопрос 3: Какой тег создает ссылку в HTML?</h3>
+            <div class="options">
+                <label>
+                    <input type="radio" name="q3" value="-5" onclick="checkAnswer(3, this)"> &lt;img&gt;
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="-5" onclick="checkAnswer(3, this)"> &lt;div&gt;
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="10" onclick="checkAnswer(3, this)"> &lt;a&gt;
+                </label>
+            </div>
+        </div>
+        
+        <button type="button" id="showResultBtn" onclick="showResult()">Получить результат</button>
+    </form>
+    
+    <div id="result"></div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

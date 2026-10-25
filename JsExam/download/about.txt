@@ -1,0 +1,64 @@
+
+<div class="text-center">
+    <h3>About Us</h3>
+    <p>Each pet has its own personalities and habits, though our care and love for each pet is equal. We plan every single shipment with love.</p>
+</div>
+
+ <div class="row">
+  <div class="col-sm-6">
+    <img class="img-fluid" src="img/service1.jpg" alt="Service">
+  </div>
+  <div class="col-sm-6 innewservice-list">
+    <p>Antipat is an international pet shipping services company. Our services include but not limit to, pet relocation and pet boarding, etc. Antipat is also an adviser of all sorts of pet related vaccines. We locate in London, England.</p><p>Thanks to the great working relationships and partnerships with each airlines company and our professional team, Antipat has become the major Chinese pet shipping company overseas. We specially are experienced for pets that are going in and out of China, England, the United States of America, other European and American countries.</p>
+  </div>
+  <!--<div class="col-sm-6 innewservice-list">
+    <div class="service-box">
+        <div class="item">
+            <a href="#">
+                <h5>1. Listen and Learn</h5>
+                <p>Before  the  shipment,  a  draft  of  how  we  ship  your  pet  back  home  will  be  provided  to  you  so  that  you  can  have  a  general  idea  of  what  needs  to  be  done.  Once  you  have  provided  us  with  the  departure  city  or  airport,  final  destination,  estim...</p>
+            </a>
+        </div>
+    </div>
+    <div class="service-box">
+      <div class="item">
+          <a href="#">
+              <h5>2. Customized Shipments</h5>
+              <p>Once  we  learn  more  of  the  pet  and  shipment,  we  will  work  on  finding  the  best  flight  route,  confirming  the  size  of  the  kennel  and  proactively  searching  to  see  if  there  are  any  obstacles  or  challenging  that  we  need  to  avoid  or  resolve  to  ...</p>
+          </a>
+      </div>
+    </div>
+    <div class="service-box">
+        <div class="item">
+            <a href="#">
+                <h5>3. Booking Our Services</h5>
+                <p>Once  we  have  been  notified  that  you  would  like  to  move  forward  with  our  services,  we  will  start  our  planning  immediately.  Planning  usually  includes  booking  flight  for  the  pet,  land  transportation,  appointments  with  animal  hospitals/veterinary  cl...</p>
+            </a>
+        </div>
+    </div>
+    <div class="service-box">
+        <div class="item">
+            <a href="#">
+                <h5>4. Documentations and Other Details</h5>
+                <p>You  will  be  surprised  the  amount  of  documentations  that  you  need  to  prepare  in  order  to  ship  your  pet  back  home.  What  make  us  difference?  Years  of  experiences  and  we  are  extremely  detail  oriented.  This  makes  us  and  our  services  unique  and ...</p>
+            </a>
+        </div>
+    </div>
+    <div class="service-box">
+        <div class="item">
+            <a href="#">
+                <h5>5. Schedules on the Day of Departure</h5>
+                <p>On  the  day  of  departure,  we  will  monitor  the  entire  trip  to  make  sure  everything  goes  in  smoothly.  We  will  not  only  keep  an  eye  for  the  shipment  but  also  update  you  with  every  step  of  the  shipment  till  your  pet  is  safely  arrived  to  the...</p>
+            </a>
+        </div>
+    </div>
+    <div class="service-box">
+        <div class="item">
+            <a href="#">
+                <h5>6. After Care</h5>
+                <p>Please  do  not  hesitate  to  contact  us  with  any  questions  you  may  have  even  after  you  have  been  united  with  your  beloved  pets.  Please  also  be  advised  that  we  keep  all  the  documentations  on  file.  In  case,  when  you  are  moving  with  your  pet  ...</p>
+            </a>
+        </div>
+    </div>
+  </div>-->
+</div>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			font-family: sans-serif;
+			font-size: 1rem;
+		}
+
+		.controls {
+			margin: 15px auto;
+			max-width: 800px;
+			padding: 5px;
+		}
+
+		button {
+			display: inline-block;
+			background-color: #8791ec;
+			color: #fff;
+			padding: 10px 25px;
+			border: none;
+			margin: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="controls">
+		<button onclick="main()">Check cookies</button>
+		<button onclick="checkUserAgent()">Check userAgent</button>
+		<button onclick="main1()">Check Browser Name</button>
+		<button onclick="main2()">Check Code Name</button>
+		<button onclick="main3()">Check Engine Name</button>
+		<button onclick="main4()">Check Version</button>
+		<button onclick="main5()">Check Platform</button>
+		<button onclick="main6()">Check Language</button>
+		<button onclick="demo.innerHTML = 'onLine: ' + navigator.onLine;">Check onLine</button>
+		<button onclick="demo.innerHTML = 'deviceMemory: ' + navigator.deviceMemory;">Check deviceMemory</button>
+		<button onclick="demo.innerHTML = 'hardwareConcurrency: ' + navigator.hardwareConcurrency;">Check hardwareConcurrency</button>
+		<button onclick="main7()">Check mimeTypes</button>
+	</div>
+	<div class="controls">
+		<p id="demo"></p>
+	</div>
+	 
+	<script>
+		
+		const demo = document.getElementById("demo");
+		function main() {
+			demo.innerHTML = "Cookies enabled: " + navigator.cookieEnabled;
+		}
+		function main1() {
+			demo.innerHTML = "Browser Name: " + navigator.appName;
+		}
+		function main2() {
+			demo.innerHTML = "Browser CodeName: " + navigator.appCodeName;
+		}
+		function main3() {
+			demo.innerHTML = "Browser's Engine Name: " + navigator.product;
+		}
+		function main4() {
+			demo.innerHTML = "Version info: " + navigator.appVersion;
+		}
+		function main5() {
+			demo.innerHTML = "Platform: " + navigator.platform;
+		}
+		function main6() {
+			demo.innerHTML = "Language of the browser: " + navigator.language;
+		}
+
+		function main7() {
+			let str = '';
+			for(let one of navigator.mimeTypes){
+				str+=one.type+'<br>';
+			}
+			demo.innerHTML = 'mimeTypes: ' + str;
+		}
+		function checkUserAgent() {
+			let str = '';
+			if (navigator.userAgent.search("Edge") != -1) {
+				str = "Edge";
+			}
+			else if (navigator.userAgent.search("Chrome") != -1) {
+				str = "Chrome";
+			}
+			else if (navigator.userAgent.search("Firefox") != -1) {
+				str = "Firefox";
+			}
+			else if (navigator.userAgent.search("Safari") != -1) {
+				str = "Safari";
+			}
+			else if (/MSIE|Trident|Edge\//.test(navigator.userAgent)) {
+				str = "Internet Explorer";
+			}
+			else {
+				str = "Unknown Browser";
+			}
+			demo.innerHTML = "<p><strong>userAgent: " + str + '</strong></p>'+"<p><strong>userAgent.brands: " + navigator.userAgentData.brands + '</strong></p>'+navigator.userAgent;
+			console.log(navigator.userAgentData.brands);
+		}
+	</script>
+</body>
+
+</html>

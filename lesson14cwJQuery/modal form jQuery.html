@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modal Form jQuery</title>
+	<style>
+		#fon {
+			min-width: 100%;
+			min-height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background: rgba(0, 0, 0, .7);
+		}
+
+		#modal {
+			width: 400px;
+			height: 250px;
+			background: #fff;
+			color: #333;
+			margin: 10% auto;
+			font: 16px Tahoma, sans-serif;
+		}
+
+		#modal label {
+			display: inline-block;
+			width: 100px;
+		}
+
+		#modal input {
+			width: 200px;
+		}
+
+		#inner-form {
+			padding: 20px 25px 0 25px;
+		}
+
+		#modal h2 {
+			background: #FF5C26;
+			color: #fff;
+			border-bottom: 1px solid #666;
+			box-shadow: 0 0 3px #333;
+			padding: 5px 10px;
+			margin: 0;
+			text-align: center;
+		}
+
+		#close {
+			display: inline-block;
+			position: relative;
+			left: 40px;
+			cursor: pointer;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<h1>jQuery Form</h1>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, quisquam. Dolor, quas natus velit beatae aut, labore dolore pariatur quae cupiditate sapiente iste, iure porro! Tempore voluptas commodi cupiditate perspiciatis.</p>
+	<p>Dolores, quisquam optio obcaecati voluptate minima, quos voluptates quia at incidunt suscipit delectus doloribus. Fugit, obcaecati praesentium minima mollitia dolor deleniti, doloremque consequatur earum numquam libero necessitatibus, perspiciatis repellat et?</p>
+	<p>Architecto sapiente similique animi ullam explicabo dicta dolores velit voluptatum amet praesentium adipisci nostrum doloribus sed veniam sint harum, vitae vero! Atque sit soluta consectetur asperiores quisquam aliquam id ratione.</p>
+	<p>At excepturi sint iste repellendus facere est praesentium, accusantium impedit soluta, sunt eos voluptatibus neque laboriosam asperiores totam reprehenderit hic! Atque nisi qui dolore. Nostrum iure unde tempore omnis optio!</p>
+	<p>Quia sit eos eaque. Quaerat fugiat laudantium in itaque repellat aliquam, possimus aspernatur provident alias quasi non iste doloremque molestiae nihil mollitia maxime voluptatum? Eum eaque possimus itaque! Id, beatae.</p>
+	<p>Maiores illo magni, minima enim voluptatibus possimus fugiat ducimus consequuntur quidem veritatis veniam at pariatur mollitia quod quis harum voluptates commodi aliquam cupiditate officiis dolor in ipsa? Earum, incidunt culpa?</p>
+	<p>Eos quis praesentium eveniet, porro ipsam, unde molestias cum asperiores quibusdam distinctio expedita modi illo ratione facere atque exercitationem itaque possimus et cupiditate placeat numquam tenetur sequi necessitatibus! Nihil, praesentium?</p>
+	<p>Expedita, porro inventore? Quo illum deserunt quibusdam voluptates est repellendus repellat rerum ipsam minima quam harum qui distinctio quas ratione nobis sunt dolor inventore, temporibus omnis dolorem. Voluptate, dolorum nostrum!</p>
+	<p>Corporis provident soluta esse ipsa vel consequuntur consequatur labore error quis officiis neque ullam magni asperiores magnam hic illum doloremque natus, omnis facere pariatur libero repudiandae adipisci aliquid. Molestias, fuga.</p>
+	<p>Nesciunt vel architecto dolores odio amet, eum sapiente atque dicta perferendis consectetur nisi reiciendis aspernatur iusto deserunt dolorum magni saepe laudantium voluptas mollitia ullam quos ducimus facilis illum exercitationem. Dolor.</p>
+	<p>Expedita debitis nostrum maxime provident eligendi laboriosam magni repellendus, quod voluptatem maiores iste ex animi id iure possimus minus distinctio aliquam? Est harum saepe delectus quas? Perferendis, praesentium quasi. Laboriosam?</p>
+	<p>Consequuntur, ut. Aperiam nostrum veniam quidem eaque? Delectus commodi eos placeat quod nam porro, doloremque facilis quam aperiam cupiditate accusantium explicabo qui assumenda sit cumque ullam minima, voluptas quibusdam. Odio.</p>
+	<p>Libero earum, ad aliquid ut corrupti enim! Blanditiis laborum possimus deserunt earum? In nemo, rem labore inventore, consequatur quis dolore quasi eligendi, consequuntur ratione tempore provident! Tempore sunt debitis accusantium.</p>
+	<p>Cumque molestias est veniam molestiae nostrum neque vel architecto quo, reiciendis vitae culpa. Ut expedita, non incidunt dolor aliquid aspernatur consectetur voluptas laboriosam aperiam repudiandae ipsum eius, saepe facere soluta.</p>
+	<p>Rem est cupiditate quasi veniam quia reprehenderit sit sint id autem aut nulla tempore, dolorem porro. Minima, repellat obcaecati soluta sit ad eveniet minus ab ipsum voluptatibus dolor perspiciatis rerum?</p>
+	<p>Suscipit eligendi quae ipsum dignissimos porro sit beatae accusamus dolor voluptas cumque, reiciendis illo est dolorum cum explicabo sed, facilis, magnam a blanditiis. Est, reiciendis a error unde ullam asperiores?</p>
+	<p>Repudiandae reiciendis quasi eaque vero autem obcaecati? Minus aspernatur numquam unde nisi ad rem ut incidunt harum ab illo pariatur recusandae tenetur, suscipit doloremque consequatur repellat. Esse assumenda repellat ad.</p>
+	<p>Ad id ratione inventore a. Nemo pariatur similique necessitatibus ab tenetur incidunt itaque odio dolor vel ea autem recusandae, esse tempore nobis error animi unde maiores deleniti rerum excepturi ipsam!</p>
+	<p>Ullam, eaque! Beatae, explicabo. Non eveniet quidem, molestiae officiis dicta earum vero cupiditate quos odit soluta dolore illum nulla distinctio architecto ratione odio! Omnis, officia amet expedita culpa quis nemo.</p>
+	<p>Quibusdam, cumque distinctio? Labore eos modi culpa ut. Rerum animi sint vero illo iste. Sit, laudantium culpa! Voluptate dolore repellat ducimus at est explicabo unde. Esse, omnis. Dolore, ipsum fugiat.</p>
+	<p>Excepturi porro sint ipsum quasi. Itaque, officiis eius. Voluptates delectus aliquid, voluptatibus laboriosam eaque est distinctio ipsam sit voluptas, reprehenderit aperiam saepe laborum vero rerum amet? Enim at corrupti officiis?</p>
+	<p>Eligendi tempore voluptate cupiditate sint expedita voluptatum labore aspernatur, quos dignissimos quasi assumenda pariatur vero deserunt. Ratione corporis voluptas dicta. Ad totam nam voluptates sed fuga, a officia odit eos?</p>
+	<p>Cumque aliquam distinctio, quo incidunt non ipsum unde dolore nemo adipisci officiis ullam, soluta vero atque rerum illum quam beatae eveniet, necessitatibus eius nam nostrum accusantium autem quidem aperiam. Possimus?</p>
+	<p>Veritatis officia obcaecati adipisci ad sapiente delectus molestiae beatae, laborum eaque autem exercitationem ipsa quos sunt tenetur quae voluptatem reprehenderit iste rem voluptas blanditiis commodi temporibus ratione. Ut, voluptate quas?</p>
+	<p>Earum minima dignissimos iusto quasi quibusdam nulla soluta fugiat quia, repudiandae in nisi autem repellat magni veritatis quos facilis dolore? Dolore dignissimos accusantium ad fugit autem, voluptas ullam officia eligendi?</p>
+	<p>Molestias, aperiam iste eligendi, repellat quidem maiores minima, at saepe et sint esse fugiat. Debitis tempore, id commodi odit quaerat et eaque maxime quia in eligendi error modi praesentium dignissimos.</p>
+	<p>Consequatur totam distinctio ipsum, mollitia hic voluptate soluta quia nobis officia excepturi quas, perferendis facere obcaecati necessitatibus, et laboriosam? Laborum, perspiciatis soluta nostrum quaerat fuga voluptatem ullam incidunt aliquid? Dolor?</p>
+	<p>Quas officiis facere accusantium sit odio nam. Nesciunt aperiam vitae cupiditate! Rerum tempore ad quidem quae quasi ipsa accusamus velit, id mollitia repellat quisquam, minus, cumque similique quibusdam cum at!</p>
+	<p>Nam fuga qui, possimus expedita aut provident obcaecati commodi temporibus vel sequi id ea est perferendis? Aliquid necessitatibus repellendus a ut voluptatem quis, incidunt laudantium temporibus itaque, molestiae quod maiores.</p>
+	<p>Quaerat, beatae odio aperiam nam a minima enim cupiditate? Quam sint assumenda voluptas temporibus, maiores iusto perferendis ad explicabo laborum aliquam, error ducimus nam accusamus, doloribus aut expedita architecto soluta.</p>
+	<p><a href="#" id="open">Зарегистрироваться</a></p>
+
+	<!-- <div id='modal'>
+		<h2>Форма регистрации <span id='close' title='Закрыть форму'>x</span></h2>
+		<div id='inner-form'>
+			<form name='reg'>
+				<p><label for='login'>Логин </label><input type='text' name='login' id='login' value=''></p>
+				<p><label for='pass'>Пароль </label><input type='password' name='pass' id='pass' value=''></p>
+				<p><label for='email'>Email </label><input type='email' name='email' id='email' value=''></p>
+				<p><label for='pass' required>&nbsp; </label><input type='submit' name='getReg' id='getReg' value='Зарегистрироваться'></p>
+			</form>
+		</div>
+	</div> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src=""></script>
+</body></html>

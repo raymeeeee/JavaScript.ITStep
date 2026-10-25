@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Promise example</title>
+
+    <link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.css">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+        #animals {
+            max-width: 500px;
+        }
+        
+        #loadingBlock {
+            height: 31px;
+        }
+
+    </style>
+</head>
+
+<body> 
+    <div class="container">
+        <h1 class="text-center">Promise example</h1>
+      
+        <h2 class="text-center text-success">Photos from Unsplash.com</h2>
+      
+        <div id="animals" class="my-4 mx-auto d-flex justify-content-between">
+          <a href="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?crop=faces&fit=crop&w=500&h=700" class="btn btn-primary">Lion</a>
+          <a href="https://images.unsplash.com/photo-1551972251-12070d63502a?crop=faces&fit=crop&w=500&h=700" class="btn btn-success">Tiger</a>
+          <a href="https://images.unsplash.com/photo-1645250589919-6234ef36ecdf?crop=faces&fit=crop&w=500&h=700" class="btn btn-info">Puma</a>
+          <a href="https://images.unsplash.com/photo-1677424806841-60cfab44a842?crop=faces&fit=crop&w=500&h=700" class="btn btn-warning">Cheetah</a>
+          <a href="https://images.unsplash.com/photo-1504016652888-14988390a8fa?crop=faces&fit=crop&w=500&h=700" class="btn btn-danger">Cat</a>
+        </div>
+        <div id="loadingBlock" class="text-center my-2">
+        </div>
+        </div>
+      </div>
+</body>
+
+<script src="js-39PR/fetch-load-img.js"></script>
+
+</html>

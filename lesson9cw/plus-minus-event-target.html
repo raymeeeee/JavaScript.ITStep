@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event target</title>
+    <!--    https://learn.javascript.ru/traversing-dom    -->
+    <style>
+        #wrap {
+            width: 800px;
+            margin: 20px auto;
+            font: 18px Tahoma, sans-serif;
+        }
+
+        .header {
+            display: inline-block;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #wrap div p {
+            font-weight: normal;
+            display: none;
+        }
+
+        .plus:before {
+            content: "+ ";
+        }
+
+        .minus:before {
+            content: "- ";
+        }
+    </style>
+    <script src="js/plus-minus.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="plus"><div class="header">Element 1</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing edivt. Fuga quibusdam nesciunt numquam facidivs, quia, magni ipsa distinctio aspernatur consectetur accusantium pariatur blanditiis enim culpa commodi dolorem quidem excepturi voluptatum laboriosam.</p>
+        </div>
+        <div class="plus"><div class="header">Element 2</div>
+            <p>Dolor ipsum doloremque divbero! Natus autem omnis doloremque maiores consectetur commodi possimus eaque deleniti. Optio iusto ipsam cumque vedivt pariatur placeat animi, dignissimos nisi ex perspiciatis necessitatibus impedit quidem enim.</p>
+        </div>
+        <div class="plus"><div class="header">Element 3</div>
+            <p>Dolorum nobis atque repellat maxime, cumque neque, accusamus corporis eum, provident modi hic deleniti. Deleniti, dolor commodi dignissimos, reiciendis odit optio, iusto ipsum tempora ut, amet sit vitae doloribus nemo!</p>
+        </div>
+        <div class="plus"><div class="header">Element 4</div>
+            <p>Itaque corporis eius ratione. Est rerum, dolorum, cum facere itaque quasi. Architecto fugiat, fuga natus facidivs dolor ullam voluptatibus voluptatum quisquam cupiditate vero at corporis maxime voluptates molestiae deserunt dolores.</p>
+        </div>
+        <div class="plus"><div class="header">Element 5</div>
+            <p>Distinctio enim laboriosam quam tempora, molestias edivgendi, suscipit? Architecto labore ad nemo, excepturi adivas ratione tempora quam ea rerum repudiandae non dolore sunt illum placeat, quibusdam voluptates totam! Laborum, expedita.</p>
+        </div>
+        <div class="plus"><div class="header">Element 6</div>
+            <p>Atque quae reprehenderit dolor excepturi quisquam soluta nulla recusandae, eius error ducimus amet vitae voluptates porro non officiis adivquid et expdivcabo ab distinctio dicta esse qui corporis quos? Perferendis, vel.</p>
+        </div>
+        
+    </div>
+</body></html>

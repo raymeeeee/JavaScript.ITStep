@@ -1,0 +1,36 @@
+Каждый отдельный узел, будь то html-элемент, его атрибут или текст, в структуре DOM представлен объектом Node. Этот объект предоставляет ряд свойств, с помощью которых мы можем получить информацию о данном узле:
+
+childNodes: содержит коллекцию дочерних узлов
+
+firstChild: возвращает первый дочерний узел текущего узла
+
+lastChild: возвращает последний дочерний узел текущего узла
+
+previousSibling: возвращает предыдущий элемент, который находится на одном уровне с текущим
+
+nextSibling: возвращает следующий элемент, который находится на одном уровне с текущим
+
+ownerDocument: возвращает корневой узел документа
+
+parentNode: возвращает элемент, который содержит текущий узел
+
+nodeName: возвращает имя узла
+
+nodeType: возвращает тип узла в виде числа
+
+nodeValue: возвращает или устанавливает значение узла в виде простого текста
+
+
+nodeType
+
+Тип узла 
+1 - элемент
+
+2 - атрибут
+
+3 - текст
+
+Ссылки http://html-plus.in.ua/choose-html-elements-by-javascript/
+http://html-plus.in.ua/kak-zapisat-stroku-iz-javascript-v-html/
+http://html-plus.in.ua/sozdanie-html-yelementov-v-javascript/
+http://html-plus.in.ua/css-cvoystva-yelementa-ispolzovanie-v-javascript/

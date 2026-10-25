@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        input {
+            width: 60px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .total-row {
+            font-weight: bold;
+            background-color: #f9f9f9;
+        }
+        
+        .price {
+            text-align: right;
+        }
+        
+        .quantity {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 2</h1>
+    
+    <form id="cartForm">
+        <table>
+            <thead>
+                <tr>
+                    <th>Object</th>
+                    <th class="quantity">Quantity</th>
+                    <th class="price">Price per one</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Phone</td>
+                    <td class="quantity">
+                        <input type="number" min="1" value="1" class="quantity-input" data-price="799.99">
+                    </td>
+                    <td class="price"><span class="unit-price">799.99</span> ₽</td>
+                    <td class="price"><span class="item-total">799.99</span> ₽</td>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td class="quantity">
+                        <input type="number" min="1" value="1" class="quantity-input" data-price="2499.99">
+                    </td>
+                    <td class="price"><span class="unit-price">2499.99</span> ₽</td>
+                    <td class="price"><span class="item-total">2499.99</span> ₽</td>
+                </tr>
+                <tr>
+                    <td>Headphones</td>
+                    <td class="quantity">
+                        <input type="number" min="1" value="1" class="quantity-input" data-price="199.99">
+                    </td>
+                    <td class="price"><span class="unit-price">199.99</span> ₽</td>
+                    <td class="price"><span class="item-total">199.99</span> ₽</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="3">Total:</td>
+                    <td class="price"><span id="total-sum">3499.97</span> ₽</td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+            const totalSumElement = document.getElementById('total-sum');
+            
+            function calculateTotal() {
+                let total = 0;
+                
+                quantityInputs.forEach(input => {
+                    const quantity = parseInt(input.value);
+                    const price = parseFloat(input.dataset.price);
+                    const itemTotal = quantity * price;
+                    
+                    const itemTotalElement = input.closest('tr').querySelector('.item-total');
+                    itemTotalElement.textContent = itemTotal.toFixed(2);
+                    
+                    total += itemTotal;
+                });
+                
+                totalSumElement.textContent = total.toFixed(2);
+            }
+            
+            quantityInputs.forEach(input => {
+                input.addEventListener('change', calculateTotal);
+                input.addEventListener('input', calculateTotal);
+            });
+            
+            calculateTotal();
+        });
+    </script>
+</body>
+</html>

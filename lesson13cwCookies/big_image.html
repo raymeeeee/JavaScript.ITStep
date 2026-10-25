@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Big Image from SessionStorage</title>
+	<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
+	<style>
+		img {
+			box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4), 8px 8px 0 rgba(0, 0, 0, 0.5), 12px 12px 0 rgba(0, 0, 0, 0.6);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron my-3">
+			<h1 class="display-3" id="flowerTitle">Flower</h1>
+			<div class="row">
+				<div class="col-md-4">
+					<p class="lead" id="descr"></p>
+				</div>
+				<div class="col-md-8">
+					<img src="" alt="" id="flowerPic" class="img-fluid rounded">
+				</div>
+			</div>
+			<hr class="my-4">
+			
+			<p>
+				<a class="btn btn-primary btn-lg" href="#"  id="moreLink" target="_blank" role="button">Узнать больше</a>
+				<a class="btn btn-secondary btn-lg" href="#" onclick="history.back()" role="button">Вернуться назад</a>
+			</p>
+		</div>
+	</div>
+	<script src="./js/js.cookie.min.js"></script>
+	<script src="./js/flower.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Window onscroll event</title>
+	<style>
+		body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 6px;
+      background: limegreen;
+      width: 0%;
+      z-index: 9999;
+    }
+    .info-box {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+      z-index: 9999;
+    }
+    .content {
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .content img {
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+	</style>
+</head>
+<body>
+	<div class="progress-bar" id="progressBar"></div>
+  <div class="info-box" id="infoBox"></div>
+  <div class="content">
+    <h1>Lorem Ipsum Dolor</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fermentum, erat id fermentum tincidunt, justo eros lacinia orci, id pulvinar nulla sapien eget lacus.</p>
+    <img src="https://picsum.photos/800/400?random=1" alt="Random">
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+    <img src="https://picsum.photos/800/400?random=2" alt="Random">
+    <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    <img src="https://picsum.photos/800/400?random=3" alt="Random">
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    <img src="https://picsum.photos/800/400?random=4" alt="Random">
+    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+    <img src="https://picsum.photos/800/400?random=5" alt="Random">
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
+  </div>
+	<script src="./window-onscroll.js"></script>
+</body>
+</html>
